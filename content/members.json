@@ -2,61 +2,85 @@
   {
     "name": "Gabriel Fogaça",
     "group": "doutorado",
-    "research": "[tema de pesquisa]"
+    "advisor": "[nome do orientador]",
+    "institution": "[instituição]",
+    "lattes_url": ""
   },
   {
     "name": "Lucas Oliveira",
     "group": "doutorado",
-    "research": "[tema de pesquisa]"
+    "advisor": "[nome do orientador]",
+    "institution": "[instituição]",
+    "lattes_url": ""
   },
   {
     "name": "Giosvaldo Júnior",
     "group": "doutorado",
-    "research": "[tema de pesquisa]"
+    "advisor": "[nome do orientador]",
+    "institution": "[instituição]",
+    "lattes_url": ""
   },
   {
     "name": "André Chadú",
     "group": "doutorado",
-    "research": "[tema de pesquisa]"
+    "advisor": "[nome do orientador]",
+    "institution": "[instituição]",
+    "lattes_url": ""
   },
   {
     "name": "[Nome]",
     "group": "doutorado",
-    "research": "[tema de pesquisa]"
+    "advisor": "[nome do orientador]",
+    "institution": "[instituição]",
+    "lattes_url": ""
   },
   {
     "name": "[Nome]",
     "group": "doutorado",
-    "research": "[tema de pesquisa]"
+    "advisor": "[nome do orientador]",
+    "institution": "[instituição]",
+    "lattes_url": ""
   },
   {
     "name": "Gustavo Ranches",
     "group": "mestrado",
-    "research": "[tema de pesquisa]"
+    "advisor": "[nome do orientador]",
+    "institution": "[instituição]",
+    "lattes_url": ""
   },
   {
     "name": "Lucas Oliveira",
     "group": "mestrado",
-    "research": "[tema de pesquisa]"
+    "advisor": "[nome do orientador]",
+    "institution": "[instituição]",
+    "lattes_url": ""
   },
   {
     "name": "João Gabriel Gomes",
     "group": "mestrado",
-    "research": "[tema de pesquisa]"
+    "advisor": "[nome do orientador]",
+    "institution": "[instituição]",
+    "lattes_url": ""
   },
   {
     "name": "Roberto Torres",
     "group": "mestrado",
-    "research": "[tema de pesquisa]"
+    "advisor": "[nome do orientador]",
+    "institution": "[instituição]",
+    "lattes_url": ""
   },
   {
     "name": "Gustavo Pereira",
     "group": "mestrado",
-    "research": "[tema de pesquisa]"
+    "advisor": "[nome do orientador]",
+    "institution": "[instituição]",
+    "lattes_url": ""
   },
   {
     "name": "Victor Hugo Moreschi",
     "group": "mestrado",
-    "research": "[tema de pesquisa]"
+    "advisor": "[nome do orientador]",
+    "institution": "[instituição]",
+    "lattes_url": ""
   }
 ]

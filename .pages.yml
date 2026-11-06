@@ -78,14 +78,16 @@ content:
         required: true
         options:
           values:
-            - name: professores
-              label: Professores
             - name: doutorado
               label: Doutorado
             - name: mestrado
               label: Mestrado
-      - name: research
-        label: Área ou tema de pesquisa
+      - name: advisor
+        label: Nome do orientador
+        type: string
+        description: Deixe entre colchetes enquanto não houver confirmação.
+      - name: institution
+        label: Instituição
         type: string
       - name: lattes_url
         label: Endereço do Currículo Lattes (https://...)
@@ -140,7 +142,7 @@ content:
         label: Exibir em
         type: select
         required: true
-        description: Mude de Próximos para Passados quando o encontro terminar.
+        description: Encontros com data e hora definidas passam automaticamente ao histórico no site; este campo permanece para ajustes manuais.
         options:
           values:
             - name: proximo
@@ -158,6 +160,14 @@ content:
         description: Use em eventos com data definida. Não precisa preencher para eventos TBA ou Anterior.
         options:
           format: yyyy-MM-dd
+      - name: start_at
+        label: Data e hora do encontro (para destaque automático)
+        type: date
+        default: ''
+        description: Horário de São Paulo. O próximo encontro é escolhido por este campo. Deixe vazio se for TBA.
+        options:
+          time: true
+          format: yyyy-MM-dd'T'HH:mm
       - name: category
         label: Categoria
         type: select
@@ -188,46 +198,3 @@ content:
         label: Link dos slides (relativo ao site ou https://...)
         type: string
         description: 'Ex.: ./materiais/2026/2026-11-05-nakamura-steinsson/slides.pdf'
-  - name: materiais
-    label: Acervo de materiais
-    type: file
-    path: content/resources.json
-    format: json
-    list: true
-    operations:
-      delete: false
-    fields:
-      - name: type
-        label: Tipo de material
-        type: select
-        options:
-          values:
-            - name: Apresentação
-              label: Apresentação
-            - name: Cronograma
-              label: Cronograma
-            - name: Artigo
-              label: Artigo
-            - name: Livro
-              label: Livro
-            - name: Ementa
-              label: Ementa
-            - name: Outro
-              label: Outro
-      - name: date_display
-        label: Data ou ano
-        type: string
-      - name: title
-        label: Título
-        type: string
-        required: true
-      - name: details
-        label: Descrição, autoria ou apresentador
-        type: text
-      - name: url
-        label: Link do arquivo ou referência
-        type: string
-        description: URL externa (https://...) ou caminho relativo (./materiais/...)
-      - name: link_label
-        label: Texto do link
-        type: string
