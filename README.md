@@ -8,28 +8,12 @@ Este repositório reúne o **site do grupo**, as apresentações realizadas nos 
 
 **[Acessar o site](https://granches.github.io/GE_Macroeconometria_FEA/)** · **[Consultar o acervo](./materiais/)** · **[Ver a programação](https://granches.github.io/GE_Macroeconometria_FEA/#eventos)**
 
-## Encontros e participação
-
-- **Quando:** quintas-feiras, às 10h.
-- **Onde:** Sala Delfim Netto, FEA-USP, Cidade Universitária, São Paulo.
-- **Participação:** aberta a estudantes, docentes, pesquisadores e profissionais interessados no tema.
-
 A programação, os textos de cada reunião e eventuais alterações de horário ou local são divulgados no [site do grupo](https://granches.github.io/GE_Macroeconometria_FEA/). Para participar ou apresentar um trabalho, entre em contato pelo e-mail [granches@usp.br](mailto:granches@usp.br).
 
-O grupo também prevê uma **conferência em abril de 2027**. Datas, programação e chamada de trabalhos serão anunciadas no site, conforme confirmadas.
 
 ## Acervo acadêmico
 
 O acervo é organizado por ano e encontro. Sempre que disponíveis e autorizados para divulgação, reunimos os slides e outros materiais elaborados pelos apresentadores, além de referências para os textos discutidos.
-
-**Apresentações disponíveis:**
-
-| Data | Texto discutido | Apresentador | Material |
-| --- | --- | --- | --- |
-| 29/10/2026 | Stock e Watson (2017), *Twenty Years of Time Series Econometrics in Ten Pictures* | Giosvaldo Júnior | [Slides (PDF)](./materiais/2026/2026-10-29-stock-watson/slides.pdf) |
-| 05/11/2026 | Nakamura e Steinsson (2018), *Identification in Macroeconomics* | Lucas Oliveira | [Slides (PDF)](./materiais/2026/2026-11-05-nakamura-steinsson/slides.pdf) |
-
-Também está disponível o [cronograma de leituras (XLSX)](./materiais/cronograma-de-leituras.xlsx), com bibliografia e planejamento de estudo. Os encontros e materiais mais recentes podem ser consultados no site.
 
 ## Organização do repositório
 
