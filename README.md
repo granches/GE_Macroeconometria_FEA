@@ -25,7 +25,6 @@ Também está disponível o [cronograma de leituras (XLSX)](./materiais/cronogra
 | `content/publications.json` | Pesquisas e publicações |
 | `content/events.json` | Encontros e eventos |
 | `content/resources.json` | Catálogo do acervo |
-| `materiais/` | Apresentações e documentos, organizados por ano e encontro |
 | `media/` | Arquivos de mídia do site |
 
 ## Como atualizar o site e contribuir
