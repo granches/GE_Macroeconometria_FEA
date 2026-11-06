@@ -1,0 +1,186 @@
+media:
+  input: media
+  output: /media
+content:
+  - name: informacoes
+    label: Informações gerais e conferência
+    type: file
+    path: content/site.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: draft_notice
+        label: Mostrar aviso de rascunho
+        type: boolean
+        description: Desative apenas quando os dados pendentes forem preenchidos.
+      - name: draft_message
+        label: Texto do aviso
+        type: text
+      - name: hero_label
+        label: Identificação acima do título
+        type: string
+      - name: hero_description
+        label: Descrição da abertura
+        type: text
+      - name: about_text
+        label: Sobre o grupo
+        type: text
+      - name: meeting_schedule
+        label: Horário dos encontros
+        type: string
+      - name: meeting_place
+        label: Local dos encontros
+        type: string
+      - name: who_can_join
+        label: Quem pode participar
+        type: text
+      - name: conference_date
+        label: Conferência — mês ou data
+        type: string
+      - name: conference_days
+        label: Conferência — dias
+        type: string
+      - name: conference_place
+        label: Conferência — local
+        type: string
+      - name: conference_speakers
+        label: Conferência — palestrantes
+        type: text
+      - name: conference_call
+        label: Conferência — chamada de trabalhos
+        type: text
+      - name: contact_intro
+        label: Texto de contato
+        type: text
+      - name: contact_email
+        label: E-mail
+        type: string
+      - name: contact_address
+        label: Endereço (uma linha por trecho)
+        type: text
+  - name: membros
+    label: Membros
+    type: file
+    path: content/members.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: name
+        label: Nome
+        type: string
+        required: true
+      - name: group
+        label: Grupo
+        type: select
+        required: true
+        options:
+          values:
+            - name: professores
+              label: Professores
+            - name: doutorado
+              label: Doutorado
+            - name: mestrado
+              label: Mestrado
+      - name: research
+        label: Área ou tema de pesquisa
+        type: string
+      - name: lattes_url
+        label: Endereço do Currículo Lattes (https://...)
+        type: string
+  - name: publicacoes
+    label: Pesquisas e publicações
+    type: file
+    path: content/publications.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: year
+        label: Ano (texto)
+        type: string
+      - name: title
+        label: Título do trabalho
+        type: string
+        required: true
+      - name: authors
+        label: Autores e referência
+        type: text
+      - name: type
+        label: Tipo de publicação
+        type: select
+        options:
+          values:
+            - name: Dissertação de mestrado
+              label: Dissertação de mestrado
+            - name: Tese de doutorado
+              label: Tese de doutorado
+            - name: Artigo publicado
+              label: Artigo publicado
+            - name: Working paper
+              label: Working paper
+            - name: Outro
+              label: Outro
+      - name: url
+        label: Link do artigo ou PDF (https://...)
+        type: string
+  - name: eventos
+    label: Eventos — próximos e passados
+    type: file
+    path: content/events.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: section
+        label: Exibir em
+        type: select
+        required: true
+        description: Mude de Próximos para Passados quando o encontro terminar.
+        options:
+          values:
+            - name: proximo
+              label: Eventos próximos
+            - name: passado
+              label: Eventos passados
+      - name: date_display
+        label: Data como deve aparecer no site
+        type: string
+        description: Exemplo 12/11/2026, 10h ou TBA.
+      - name: sort_date
+        label: Data para ordenar (opcional)
+        type: date
+        default: ""
+        description: Use em eventos com data definida. Não precisa preencher para eventos TBA ou Anterior.
+        options:
+          format: yyyy-MM-dd
+      - name: category
+        label: Categoria
+        type: select
+        options:
+          values:
+            - name: Grupo de leitura
+              label: Grupo de leitura
+            - name: Seminário interno
+              label: Seminário interno
+            - name: Palestra convidada
+              label: Palestra convidada
+            - name: Outro
+              label: Outro
+      - name: title
+        label: Título do encontro ou artigo
+        type: string
+        required: true
+      - name: details
+        label: Detalhes, apresentador e local
+        type: text
+      - name: url
+        label: Link do artigo ou inscrição (https://...)
+        type: string
+      - name: link_label
+        label: Texto do link
+        type: string

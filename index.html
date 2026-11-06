@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+#contactAddress { white-space: pre-line; }
+</style></head><body>
+<title>Grupo de Estudos em Macroeconometria</title>
+<meta content="cover" name="claude:viewport-fit-sides"/>
+<meta content="Grupo de estudos de macroeconometria da pós-graduação do Departamento de Economia da FEA-USP." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Libre+Franklin:ital,wght@0,400;0,500;0,600;1,400&amp;family=STIX+Two+Text:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<style>
+/* Layout: abertura com um campo abstrato de pontos, conferência em destaque sobreposta a ela; seções com título à esquerda e conteúdo à direita. */
+:root {
+  --bg: #f2f5f4;
+  --fg: #13282e;
+  --muted: #506469;
+  --line: #c6d3d2;
+  --accent: #0d5c68;
+  --tint: #e1ebe9;
+  --ph-bg: #fbefc9;
+  --ph-fg: #5f4600;
+  --ph-line: #b48a14;
+  /* A abertura e o destaque da conferência mantêm as mesmas cores nos dois temas */
+  --hero-bg: #0d3a44;
+  --hero-fg: #edf4f3;
+  --hero-muted: #b0cacb;
+  --dot: #7fb3b8;
+  --gold: #f2b632;
+  --gold-fg: #13282e;
+  --gold-line: #b98512;
+  --display: "STIX Two Text", "STIX Two", Cambria, Georgia, serif;
+  --body: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1b1f; --fg: #e4eeee; --muted: #9db3b5; --line: #2a4046; --accent: #74c8d2; --tint: #142a2f;
+    --ph-bg: #3a2f10; --ph-fg: #f2d27a; --ph-line: #8f7022; --hero-bg: #0b3039;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1b1f; --fg: #e4eeee; --muted: #9db3b5; --line: #2a4046; --accent: #74c8d2; --tint: #142a2f;
+  --ph-bg: #3a2f10; --ph-fg: #f2d27a; --ph-line: #8f7022; --hero-bg: #0b3039;
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--bg); color: var(--fg); font: 400 1rem/1.6 var(--body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+h1, h2, h3, p, dl, dd, ol, ul { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+h1, h2 { font-family: var(--display); font-weight: 500; text-wrap: balance; }
+
+.wrap {
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.label { font: 500 0.75rem/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* Campos a preencher */
+.ph {
+  background: var(--ph-bg);
+  color: var(--ph-fg);
+  border-bottom: 1px dashed var(--ph-line);
+  padding-inline: 0.2em;
+  justify-self: start;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.draft { background: var(--ph-bg); color: var(--ph-fg); font-size: 0.875rem; padding-block: 0.5rem; }
+
+/* Navegação */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+.nav-in { display: flex; align-items: center; gap: 1.5rem; padding-block: 0.65rem; }
+.brand { font: italic 500 1.15rem/1.2 var(--display); color: var(--fg); text-decoration: none; white-space: nowrap; }
+.nav ul { display: flex; gap: 1.15rem; margin-left: auto; overflow-x: auto; min-width: 0; scrollbar-width: none; }
+.nav ul a { color: var(--muted); font-size: 0.88rem; text-decoration: none; white-space: nowrap; }
+.nav ul a:hover { color: var(--accent); text-decoration: underline; }
+@media (max-width: 760px) {
+  .nav-in { flex-direction: column; align-items: stretch; gap: 0.35rem; }
+  .nav ul { margin-left: 0; padding-bottom: 0.15rem; }
+}
+
+/* Abertura */
+.hero { position: relative; overflow: hidden; background: var(--hero-bg); color: var(--hero-fg); padding-block: clamp(3rem, 7vw, 5.5rem) clamp(6rem, 11vw, 8.5rem); }
+#field { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.hero .wrap { position: relative; }
+.hero-text { display: grid; gap: 1.25rem; max-width: 640px; }
+.hero .label { color: var(--hero-muted); }
+.hero h1 { font-size: clamp(2.5rem, 6.4vw, 4.75rem); line-height: 1.02; letter-spacing: -0.012em; }
+.hero h1 em { font-weight: 400; }
+.hero p { max-width: 44ch; font-size: 1.08rem; }
+@media (max-width: 760px) { .hero { padding-bottom: 15rem; } }
+
+/* Conferência em destaque */
+.callout-wrap { position: relative; z-index: 1; margin-top: clamp(-4.5rem, -6vw, -3rem); }
+.callout {
+  background: var(--gold);
+  color: var(--gold-fg);
+  border-radius: 3px;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 1.75rem 3rem;
+  align-items: end;
+  scroll-margin-top: 4.5rem;
+}
+.callout .label { color: var(--gold-fg); }
+.callout h2 { font-size: clamp(2.5rem, 5.6vw, 4rem); line-height: 1.02; margin-top: 0.6rem; }
+.callout dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem 1.5rem; }
+.callout dl > div { border-top: 1px solid var(--gold-line); padding-top: 0.5rem; }
+.callout dd { font: 500 1.05rem/1.4 var(--mono); margin-top: 0.15rem; }
+@media (max-width: 760px) { .callout { grid-template-columns: minmax(0, 1fr); scroll-margin-top: 6.5rem; } }
+
+/* Seções */
+.sec { padding-block: clamp(2.75rem, 6vw, 4.5rem); border-bottom: 1px solid var(--line); scroll-margin-top: 3.5rem; }
+.sec-in { display: grid; grid-template-columns: minmax(0, 190px) minmax(0, 1fr); gap: 1.25rem 2.5rem; }
+.sec h2 { font-size: clamp(1.7rem, 3vw, 2.15rem); line-height: 1.12; }
+.content { display: grid; gap: 2.5rem; min-width: 0; }
+.prose { display: grid; gap: 0.9rem; max-width: 65ch; font-size: 1.06rem; }
+@media (max-width: 760px) { .sec-in { grid-template-columns: minmax(0, 1fr); } .sec { scroll-margin-top: 5.5rem; } }
+
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem 2rem; }
+.facts dd { margin-top: 0.15rem; }
+.facts .wide { grid-column: 1 / -1; }
+@media (max-width: 520px) { .facts { grid-template-columns: minmax(0, 1fr); } }
+
+/* Membros */
+.group { display: grid; gap: 0.75rem; }
+.people { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem 1.75rem; }
+.person { display: grid; gap: 0.2rem; align-content: start; font-size: 0.93rem; }
+.person strong { font: 500 1.12rem/1.3 var(--display); }
+.person span { color: var(--muted); }
+.person span.ph { color: var(--ph-fg); }
+@media (max-width: 760px) { .people { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .people { grid-template-columns: minmax(0, 1fr); } }
+
+/* Publicações e eventos */
+.rows li { display: grid; gap: 0.25rem 1.5rem; padding-block: 0.9rem; border-top: 1px solid var(--line); }
+.rows li:last-child { border-bottom: 1px solid var(--line); }
+.pubs li { grid-template-columns: 4.5rem minmax(0, 1fr) 9.5rem; }
+.events li { grid-template-columns: 9.5rem minmax(0, 1fr); }
+.rows .mono { font-size: 0.85rem; color: var(--muted); }
+.rows .mono.ph { color: var(--ph-fg); }
+.rows .title { font: 500 1.1rem/1.35 var(--display); }
+.rows .meta { font-size: 0.92rem; color: var(--muted); }
+.kind { font: 500 0.74rem/1.5 var(--mono); color: var(--accent); }
+.pubs .kind { text-align: right; }
+@media (max-width: 620px) {
+  .pubs li, .events li { grid-template-columns: minmax(0, 1fr); }
+  .pubs .kind { text-align: left; }
+}
+
+/* Contato */
+.contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 2.5rem; }
+.contact address { font-style: normal; margin-top: 0.3rem; }
+.mail { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin-top: 0.3rem; font-size: 1.1rem; }
+.mail span { user-select: all; overflow-wrap: anywhere; }
+button {
+  font: 500 0.8rem/1 var(--body); color: var(--accent); background: transparent;
+  border: 1px solid var(--accent); border-radius: 3px; padding: 0.42rem 0.65rem; cursor: pointer;
+}
+button:hover { background: var(--tint); }
+@media (max-width: 620px) { .contact { grid-template-columns: minmax(0, 1fr); } }
+
+footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
+</style>
+<!-- Rascunho: apague este aviso quando todos os campos destacados estiverem preenchidos. -->
+<div class="draft" id="draftNotice"><div class="wrap" id="draftMessage">Rascunho. Os campos entre colchetes aguardam os dados do grupo.</div></div>
+<nav aria-label="Seções do site" class="nav">
+<div class="wrap nav-in">
+<a class="brand" href="#topo">Macroeconometria</a>
+<ul>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#membros">Membros</a></li>
+<li><a href="#pesquisas">Pesquisas e publicações</a></li>
+<li><a href="#eventos">Eventos próximos</a></li>
+<li><a href="#eventos-passados">Eventos passados</a></li>
+<li><a href="#conferencia">Conferência</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</div>
+</nav>
+<header class="hero" id="topo">
+<canvas aria-hidden="true" id="field"></canvas>
+<div class="wrap">
+<div class="hero-text">
+<span class="label" id="heroLabel">Pós-graduação · Departamento de Economia · FEA-USP</span>
+<h1>Grupo de Estudos em <em>Macroeconometria</em></h1>
+<p id="heroDescription">Discutimos artigos recentes de macroeconometria e finanças e desenvolvemos pesquisa própria na área.</p>
+</div>
+</div>
+</header>
+<div class="wrap callout-wrap">
+<section aria-labelledby="conf-data" class="callout" id="conferencia">
+<div>
+<div class="label">Conferência</div>
+<h2 id="conf-data">Abril de 2027</h2>
+</div>
+<dl>
+<div><dt class="label">Dias</dt><dd id="conferenceDays">TBA</dd></div>
+<div><dt class="label">Local</dt><dd id="conferencePlace">TBA</dd></div>
+<div><dt class="label">Palestrantes</dt><dd id="conferenceSpeakers">TBA</dd></div>
+<div><dt class="label">Chamada de trabalhos</dt><dd id="conferenceCall">TBA</dd></div>
+</dl>
+</section>
+</div>
+<main>
+<section class="sec" id="sobre">
+<div class="wrap sec-in">
+<h2>Sobre</h2>
+<div class="content">
+<div class="prose">
+<p id="aboutText">O grupo reúne alunos de mestrado e doutorado do Departamento de Economia da FEA-USP interessados nos métodos empíricos da macroeconomia e finanças, assim como suas aplicações. Lemos artigos recentes, apresentamos trabalhos em andamento e organizamos seminários e discussões.</p>
+</div>
+<dl class="facts">
+<div><dt class="label">Encontros</dt><dd id="meetingSchedule">Toda quinta-feira, 10h</dd></div>
+<div><dt class="label">Local</dt><dd id="meetingPlace">Sala Delfim Netto, FEA-USP</dd></div>
+<div class="wide"><dt class="label">Quem pode participar</dt><dd id="whoCanJoin">Qualquer pessoa interessada no tema, seja professor, aluno ou profissional.</dd></div>
+</dl>
+</div>
+</div>
+</section>
+<section class="sec" id="membros">
+<div class="wrap sec-in">
+<h2>Membros</h2>
+<div class="content">
+<!-- Para adicionar alguém, copie um bloco <li class="person"> inteiro. -->
+<div class="group">
+<h3 class="label">Professores</h3>
+<ul class="people" id="memberProfessors">
+<li class="person"><strong class="ph">[Nome]</strong><span class="ph">[áreas de interesse]</span><a href="#membros">Currículo Lattes</a></li>
+<li class="person"><strong class="ph">[Nome]</strong><span class="ph">[áreas de interesse]</span><a href="#membros">Currículo Lattes</a></li>
+</ul>
+</div>
+<div class="group">
+<h3 class="label">Doutorado</h3>
+<ul class="people" id="memberDoctoral">
+<li class="person"><strong>Gabriel Fogaça</strong><span class="ph">[tema de pesquisa]</span><a href="#membros">Currículo Lattes</a></li>
+<li class="person"><strong>Lucas Oliveira</strong><span class="ph">[tema de pesquisa]</span><a href="#membros">Currículo Lattes</a></li>
+<li class="person"><strong>Giosvaldo Júnior</strong><span class="ph">[tema de pesquisa]</span><a href="#membros">Currículo Lattes</a></li>
+<li class="person"><strong>André Chadú</strong><span class="ph">[tema de pesquisa]</span><a href="#membros">Currículo Lattes</a></li>
+<li class="person"><strong class="ph">[Nome]</strong><span class="ph">[tema de pesquisa]</span><a href="#membros">Currículo Lattes</a></li>
+<li class="person"><strong class="ph">[Nome]</strong><span class="ph">[tema de pesquisa]</span><a href="#membros">Currículo Lattes</a></li>
+</ul>
+</div>
+<div class="group">
+<h3 class="label">Mestrado</h3>
+<ul class="people" id="memberMasters">
+<li class="person"><strong>Gustavo Ranches</strong><span class="ph">[tema de pesquisa]</span><a href="#membros">Currículo Lattes</a></li>
+<li class="person"><strong>Lucas Oliveira</strong><span class="ph">[tema de pesquisa]</span><a href="#membros">Currículo Lattes</a></li>
+<li class="person"><strong>João Gabriel Gomes</strong><span class="ph">[tema de pesquisa]</span><a href="#membros">Currículo Lattes</a></li>
+<li class="person"><strong>Roberto Torres</strong><span class="ph">[tema de pesquisa]</span><a href="#membros">Currículo Lattes</a></li>
+<li class="person"><strong>Gustavo Pereira</strong><span class="ph">[tema de pesquisa]</span><a href="#membros">Currículo Lattes</a></li>
+<li class="person"><strong>Victor Hugo Moreschi</strong><span class="ph">[tema de pesquisa]</span><a href="#membros">Currículo Lattes</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="sec" id="pesquisas">
+<div class="wrap sec-in">
+<h2>Pesquisas e publicações</h2>
+<div class="content">
+<!-- Para adicionar um trabalho, copie um bloco <li> inteiro. -->
+<ul class="rows pubs" id="publicationList">
+<li><span class="mono">2026</span><div><div class="title">Unclogging the Channel: The Role of Self-Employment in Monetary Policy</div><div class="meta">João Gabriel Gomes</div></div><span class="kind">Dissertação de mestrado</span></li>
+<li><span class="mono">2026</span><div><div class="title">Active Share, Return Predictability and Information Dynamics</div><div class="meta">Gustavo Ranches</div></div><span class="kind">Dissertação de mestrado</span></li>
+<li><span class="mono ph">[ano]</span><div><div class="title"><span class="ph">[Título do artigo]</span></div><div class="meta"><span class="ph">[Autores]</span>, <span class="ph">[periódico]</span></div></div><span class="kind">Artigo publicado</span></li>
+<li><span class="mono ph">[ano]</span><div><div class="title"><span class="ph">[Título do working paper]</span></div><div class="meta"><span class="ph">[Autores]</span>, <span class="ph">[série ou repositório]</span></div></div><span class="kind">Working paper</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="sec" id="eventos">
+<div class="wrap sec-in">
+<h2>Eventos próximos</h2>
+<div class="content">
+<!-- Mantenha os eventos em ordem de data. Quando um evento passar, mova o bloco para Eventos passados. -->
+<ul class="rows events" id="upcomingEvents">
+<li><span class="mono">12/11/2026, 10h</span><div><div class="kind">Grupo de leitura</div><div class="title"><span class="ph">[Artigo a ser discutido]</span></div><div class="meta">Apresentação de Gabriel Fogaça · Sala Delfim Netto</div></div></li>
+<li><span class="mono">19/11/2026, 10h</span><div><div class="kind">Grupo de leitura</div><div class="title">Weak Instruments in Instrumental Variables Regression: Theory and Practice</div><div class="meta">Andrews, Stock e Sun (2019), Annual Review of Economics · Apresentação de Lucas Oliveira · Sala Delfim Netto</div><div class="meta"><a href="https://ideas.repec.org/a/anr/reveco/v11y2019p727-753.html" rel="noopener" target="_blank">Artigo</a></div></div></li>
+<li><span class="mono">TBA</span><div><div class="kind">Seminário interno</div><div class="title">TBA</div></div></li>
+<li><span class="mono">TBA</span><div><div class="kind">Palestra convidada</div><div class="title">TBA</div></div></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="sec" id="eventos-passados">
+<div class="wrap sec-in">
+<h2>Eventos passados</h2>
+<div class="content">
+<!-- Do mais recente para o mais antigo. -->
+<ul class="rows events" id="pastEvents">
+<li><span class="mono">05/11/2026</span><div><div class="kind">Grupo de leitura</div><div class="title">Identification in Macroeconomics</div><div class="meta">Nakamura e Steinsson (2018), Journal of Economic Perspectives · Apresentação de Lucas Oliveira</div><div class="meta"><a href="https://doi.org/10.1257/jep.32.3.59" rel="noopener" target="_blank">Artigo</a></div></div></li>
+<li><span class="mono">29/10/2026</span><div><div class="kind">Grupo de leitura</div><div class="title">Twenty Years of Time Series Econometrics in Ten Pictures</div><div class="meta">Stock e Watson (2017), Journal of Economic Perspectives · Apresentação de Giosvaldo Júnior</div><div class="meta"><a href="https://doi.org/10.1257/jep.31.2.59" rel="noopener" target="_blank">Artigo</a></div></div></li>
+<li><span class="mono">Anterior</span><div><div class="kind">Grupo de leitura</div><div class="title">Time Series Analysis</div><div class="meta">Hamilton (1994), Princeton University Press</div></div></li>
+<li><span class="mono">Anterior</span><div><div class="kind">Grupo de leitura</div><div class="title">Mostly Harmless Econometrics</div><div class="meta">Angrist e Pischke (2009), Princeton University Press</div></div></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="sec" id="contato">
+<div class="wrap sec-in">
+<h2>Contato</h2>
+<div class="content">
+<p class="prose" id="contactIntro">Para participar dos encontros, escreva contando seu vínculo e o que você pesquisa ou estuda.</p>
+<div class="contact">
+<div>
+<div class="label">E-mail do grupo</div>
+<div class="mail">
+<span id="email">granches@usp.br</span>
+<button id="copy" type="button">Copiar</button>
+</div>
+</div>
+<div>
+<div class="label">Endereço</div>
+<address id="contactAddress">
+              Departamento de Economia, FEA-USP<br/>
+              Av. Prof. Luciano Gualberto, 908<br/>
+              Cidade Universitária, São Paulo, SP<br/>
+              05508-010
+            </address>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer><div class="wrap">Grupo de Estudos em Macroeconometria · Pós-graduação em Economia, FEA-USP</div></footer>
+<script>
+(function () {
+  /* Campo de pontos: duas ondas se propagam por uma malha regular e interferem. */
+  var cv = document.getElementById('field');
+  function smooth(a, b, v) {
+    var t = Math.min(1, Math.max(0, (v - a) / (b - a)));
+    return t * t * (3 - 2 * t);
+  }
+  function draw() {
+    var W = cv.clientWidth, H = cv.clientHeight;
+    if (!W || !H) return;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cv.width = W * dpr; cv.height = H * dpr;
+    var ctx = cv.getContext('2d');
+    ctx.scale(dpr, dpr);
+    var css = getComputedStyle(document.documentElement);
+    var dot = css.getPropertyValue('--dot').trim(), gold = css.getPropertyValue('--gold').trim();
+    var narrow = W < 760, step = narrow ? 12 : 15;
+    var s1 = narrow ? [W * 0.72, H * 0.86] : [W * 0.76, H * 0.46];
+    var s2 = narrow ? [W * 0.05, H * 1.05] : [W * 1.02, H * 1.05];
+    for (var y = step / 2; y < H; y += step) {
+      for (var x = step / 2; x < W; x += step) {
+        /* Máscara: os pontos somem na região do texto */
+        var mask = narrow ? smooth(H * 0.6, H * 0.76, y) : smooth(W * 0.5, W * 0.72, x);
+        if (mask <= 0) continue;
+        var d1 = Math.hypot(x - s1[0], y - s1[1]), d2 = Math.hypot(x - s2[0], y - s2[1]);
+        var w = Math.sin(d1 / 19) * Math.exp(-d1 / 340) + 0.65 * Math.sin(d2 / 27) * Math.exp(-d2 / 520);
+        var a = Math.abs(w);
+        var r = (0.5 + 3.1 * a) * mask;
+        ctx.globalAlpha = (0.22 + 0.72 * Math.min(1, a)) * mask;
+        ctx.fillStyle = (w > 0.72) ? gold : dot;
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+  }
+  draw();
+  if (window.ResizeObserver) new ResizeObserver(draw).observe(cv);
+  else window.addEventListener('resize', draw);
+
+  var btn = document.getElementById('copy'), mail = document.getElementById('email');
+  btn.addEventListener('click', function () {
+    function selectIt() {
+      var r = document.createRange();
+      r.selectNodeContents(mail);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+      btn.textContent = 'Selecionado';
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(mail.textContent.trim()).then(function () {
+        btn.textContent = 'Copiado';
+      }, selectIt);
+    } else {
+      selectIt();
+    }
+    setTimeout(function () { btn.textContent = 'Copiar'; }, 2000);
+  });
+})();
+</script>
+<script>
+(function () {
+  'use strict';
+  // Conteúdo vem de arquivos JSON editáveis pelo Pages CMS.
+  // O HTML original permanece como conteúdo de reserva enquanto os dados carregam.
+  function byId(id) { return document.getElementById(id); }
+  function setText(id, value) {
+    var el = byId(id);
+    if (el && value !== undefined && value !== null) el.textContent = String(value);
+  }
+  function mk(tag, cls, val) {
+    var el = document.createElement(tag);
+    if (cls) el.className = cls;
+    if (val !== undefined && val !== null) el.textContent = String(val);
+    if (typeof val === 'string' && val.includes('[') && val.includes(']')) el.classList.add('ph');
+    return el;
+  }
+  function validUrl(value) {
+    if (typeof value !== 'string') return '';
+    try {
+      var url = new URL(value, document.baseURI);
+      return (url.protocol === 'https:' || url.protocol === 'http:') ? url.href : '';
+    } catch (e) { return ''; }
+  }
+  function appendLink(node, url, label) {
+    var href = validUrl(url);
+    if (!href) return;
+    var a = mk('a', '', label);
+    a.href = href;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    node.appendChild(a);
+  }
+  function renderSite(data) {
+    byId('draftNotice').hidden = !data.draft_notice;
+    setText('draftMessage',data.draft_message);
+    setText('heroLabel',data.hero_label);
+    setText('heroDescription',data.hero_description);
+    setText('aboutText',data.about_text);
+    setText('meetingSchedule',data.meeting_schedule);
+    setText('meetingPlace',data.meeting_place);
+    setText('whoCanJoin',data.who_can_join);
+    setText('conf-data',data.conference_date);
+    setText('conferenceDays',data.conference_days);
+    setText('conferencePlace',data.conference_place);
+    setText('conferenceSpeakers',data.conference_speakers);
+    setText('conferenceCall',data.conference_call);
+    setText('contactIntro',data.contact_intro);
+    setText('email',data.contact_email);
+    setText('contactAddress',data.contact_address);
+  }
+  function renderMembers(data) {
+    var groups = {professores:byId('memberProfessors'),doutorado:byId('memberDoctoral'),mestrado:byId('memberMasters')};
+    Object.keys(groups).forEach(function(k){ groups[k].replaceChildren(); });
+    data.forEach(function(p) {
+      var target=groups[p.group]; if(!target) return;
+      var li=mk('li','person');
+      li.appendChild(mk('strong','',p.name || ''));
+      li.appendChild(mk('span','',p.research || ''));
+      appendLink(li,p.lattes_url,'Currículo Lattes');
+      target.appendChild(li);
+    });
+  }
+  function renderPublications(data) {
+    var target=byId('publicationList'); target.replaceChildren();
+    data.forEach(function(p) {
+      var li=mk('li');
+      li.appendChild(mk('span','mono',p.year||''));
+      var main=mk('div');
+      var title=mk('div','title',p.title||'');
+      var href=validUrl(p.url);
+      if(href) {title.replaceChildren();appendLink(title,href,p.title||'');}
+      main.appendChild(title);
+      main.appendChild(mk('div','meta',p.authors||''));
+      li.appendChild(main);
+      li.appendChild(mk('span','kind',p.type||''));
+      target.appendChild(li);
+    });
+  }
+  function renderEvents(data) {
+    var targets = {proximo:byId('upcomingEvents'),passado:byId('pastEvents')};
+    Object.keys(targets).forEach(function(k){ targets[k].replaceChildren(); });
+    ['proximo','passado'].forEach(function(status){
+      var items=data.filter(function(p){return p.section===status;});
+      items.sort(function(a,b) {
+        if(!a.sort_date && !b.sort_date) return 0;
+        if(!a.sort_date) return 1;
+        if(!b.sort_date) return -1;
+        return status==='proximo' ? a.sort_date.localeCompare(b.sort_date) : b.sort_date.localeCompare(a.sort_date);
+      });
+      items.forEach(function(p){
+        var li=mk('li');
+        li.appendChild(mk('span','mono',p.date_display||''));
+        var main=mk('div');
+        main.appendChild(mk('div','kind',p.category||''));
+        main.appendChild(mk('div','title',p.title||''));
+        if(p.details) main.appendChild(mk('div','meta',p.details));
+        if(validUrl(p.url)) {
+          var links=mk('div','meta');
+          appendLink(links,p.url,p.link_label||'Artigo');
+          main.appendChild(links);
+        }
+        li.appendChild(main);
+        targets[status].appendChild(li);
+      });
+    });
+  }
+  function load(path, render) {
+    fetch(path, {cache:'no-cache'})
+      .then(function(response){if(!response.ok) throw new Error('HTTP '+response.status);return response.json();})
+      .then(render)
+      .catch(function(error){console.warn('Falha ao atualizar '+path+'. Usando conteúdo HTML de reserva.',error);});
+  }
+  load('./content/site.json',renderSite);
+  load('./content/members.json',renderMembers);
+  load('./content/publications.json',renderPublications);
+  load('./content/events.json',renderEvents);
+})();
+</script></body></html>
