@@ -1,12 +1,11 @@
 [
   {
     "section": "proximo",
-    "date_display": "12/11/2026, 10h",
-    "sort_date": "2026-11-12",
+    "date_display": "10/11/2026, 18h",
+    "sort_date": "2026-11-10",
     "category": "Grupo de leitura",
-    "title": "[Artigo a ser discutido]",
-    "details": "Apresentação de Gabriel Fogaça · Sala Delfim Netto",
-    "url": "",
+    "title": "Asset Pricing in the Frequency Domain: Theory and Empirics",
+    "details": "Dew-Becker, I., and Giglio, S. (2016), Review of Financial Studies · Apresentação de Gabriel Fogaça · Sala Delfim Netto",
     "link_label": "Artigo"
   },
   {
@@ -22,21 +21,15 @@
   {
     "section": "proximo",
     "date_display": "TBA",
-    "sort_date": "",
     "category": "Seminário interno",
     "title": "TBA",
-    "details": "",
-    "url": "",
     "link_label": "Artigo"
   },
   {
     "section": "proximo",
     "date_display": "TBA",
-    "sort_date": "",
     "category": "Palestra convidada",
     "title": "TBA",
-    "details": "",
-    "url": "",
     "link_label": "Artigo"
   },
   {
@@ -64,21 +57,17 @@
   {
     "section": "passado",
     "date_display": "Anterior",
-    "sort_date": "",
     "category": "Grupo de leitura",
     "title": "Time Series Analysis",
     "details": "Hamilton (1994), Princeton University Press",
-    "url": "",
     "link_label": "Artigo"
   },
   {
     "section": "passado",
     "date_display": "Anterior",
-    "sort_date": "",
     "category": "Grupo de leitura",
     "title": "Mostly Harmless Econometrics",
     "details": "Angrist e Pischke (2009), Princeton University Press",
-    "url": "",
     "link_label": "Artigo"
   }
 ]
