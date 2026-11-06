@@ -10,13 +10,6 @@ content:
     operations:
       delete: false
     fields:
-      - name: draft_notice
-        label: Mostrar aviso de rascunho
-        type: boolean
-        description: Desative apenas quando os dados pendentes forem preenchidos.
-      - name: draft_message
-        label: Texto do aviso
-        type: text
       - name: hero_label
         label: Identificação acima do título
         type: string
@@ -38,17 +31,8 @@ content:
       - name: conference_date
         label: Conferência — mês ou data
         type: string
-      - name: conference_days
-        label: Conferência — dias
-        type: string
-      - name: conference_place
-        label: Conferência — local
-        type: string
-      - name: conference_speakers
-        label: Conferência — palestrantes
-        type: text
-      - name: conference_call
-        label: Conferência — chamada de trabalhos
+      - name: conference_description
+        label: Texto da conferência
         type: text
       - name: contact_intro
         label: Texto de contato
@@ -86,9 +70,6 @@ content:
         label: Nome do orientador
         type: string
         description: Deixe entre colchetes enquanto não houver confirmação.
-      - name: institution
-        label: Instituição
-        type: string
       - name: lattes_url
         label: Endereço do Currículo Lattes (https://...)
         type: string

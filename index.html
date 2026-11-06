@@ -7,9 +7,7 @@
 
 
 </style><meta content="Grupo de estudos de macroeconometria da pós-graduação do Departamento de Economia da FEA-USP." name="description"/></head><body>
-
 <meta content="cover" name="claude:viewport-fit-sides"/>
-
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Libre+Franklin:ital,wght@0,400;0,500;0,600;1,400&amp;family=STIX+Two+Text:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap" rel="stylesheet"/>
@@ -118,7 +116,7 @@ h1, h2 { font-family: var(--display); font-weight: 500; text-wrap: balance; }
   scroll-margin-top: 4.5rem;
 }
 .callout .label { color: var(--gold-fg); }
-.callout h2 { font-size: clamp(2.5rem, 5.6vw, 4rem); line-height: 1.02; margin-top: 0.6rem; }
+.callout h2 { font-size: clamp(1.65rem, 3.25vw, 2.65rem); line-height: 1.02; margin-top: 0.6rem; }
 .callout dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem 1.5rem; }
 .callout dl > div { border-top: 1px solid var(--gold-line); padding-top: 0.5rem; }
 .callout dd { font: 500 1.05rem/1.4 var(--mono); margin-top: 0.15rem; }
@@ -178,7 +176,7 @@ button:hover { background: var(--tint); }
 footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 </style>
 <!-- Rascunho: apague este aviso quando todos os campos destacados estiverem preenchidos. -->
-<div class="draft" id="draftNotice"><div class="wrap" id="draftMessage">Rascunho. Os campos entre colchetes aguardam os dados do grupo.</div></div>
+
 <nav aria-label="Seções do site" class="nav">
 <div class="wrap nav-in">
 <a class="brand" href="#topo">Macroeconometria · FEA-USP</a>
@@ -188,7 +186,6 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 <li><a href="#pesquisas">Pesquisas e publicações</a></li>
 <li><a href="#eventos">Eventos próximos</a></li><li><a href="#conferencia">Conferência</a></li>
 <li><a href="#eventos-passados">Eventos passados</a></li>
-
 <li><a href="#contato">Contato</a></li>
 </ul>
 </div>
@@ -206,16 +203,16 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 <div class="wrap callout-wrap">
 <section aria-labelledby="featuredTitle" class="callout" id="destaque">
 <div class="featured-main">
-<div class="label">Próximo encontro</div>
+<div class="label" id="featuredLabel">Próximo encontro - Grupo de leitura</div>
 <h2 id="featuredTitle">Asset Pricing in the Frequency Domain: Theory and Empirics</h2>
 </div>
 <div class="featured-side">
 <dl class="featured-details">
 <div><dt class="label">Data e horário</dt><dd id="featuredDate">10/11/2026, 18h</dd></div>
-<div><dt class="label">Atividade</dt><dd id="featuredCategory">Grupo de leitura</dd></div>
+
 <div><dt class="label">Detalhes</dt><dd id="featuredDetails">Dew-Becker, I. e Giglio, S. (2016), Review of Financial Studies · Apresentação de Gabriel Fogaça · Sala Delfim Netto</dd></div>
 </dl>
-<div class="featured-links"><a href="https://doi.org/10.1093/rfs/hhw027" id="featuredArticle" rel="noopener noreferrer" target="_blank">Artigo</a><a href="#eventos">Programação completa</a></div>
+<div class="featured-links"><a href="https://doi.org/10.1093/rfs/hhw027" id="featuredArticle" rel="noopener noreferrer" target="_blank">Artigo</a></div>
 </div>
 </section>
 </div>
@@ -228,7 +225,7 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 <p id="aboutText">O grupo reúne alunos de mestrado e doutorado do Departamento de Economia da FEA-USP interessados nos métodos empíricos da macroeconomia e finanças, assim como suas aplicações. Lemos artigos recentes, apresentamos trabalhos em andamento e organizamos seminários e discussões.</p>
 </div>
 <dl class="facts">
-<div><dt class="label">Encontros</dt><dd id="meetingSchedule">Toda quinta-feira, 10h</dd></div>
+<div><dt class="label">Encontros</dt><dd id="meetingSchedule">Toda terça-feira, 18h</dd></div>
 <div><dt class="label">Local</dt><dd id="meetingPlace">Sala Delfim Netto, FEA-USP</dd></div>
 <div class="wide"><dt class="label">Quem pode participar</dt><dd id="whoCanJoin">Qualquer pessoa interessada no tema, seja professor, aluno ou profissional.</dd></div>
 </dl>
@@ -240,28 +237,13 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 <h2>Membros</h2>
 <div class="content">
 <!-- Para adicionar alguém, copie um bloco <li class="person"> inteiro. -->
-
 <div class="group">
 <h3 class="label">Doutorado</h3>
-<ul class="people" id="memberDoctoral">
-<li class="person"><strong>Gabriel Fogaça</strong><span class="ph">Orientador(a): [nome do orientador]</span><span class="ph">Instituição: [instituição]</span><a href="#membros">Currículo Lattes</a></li>
-<li class="person"><strong>Lucas Oliveira</strong><span class="ph">Orientador(a): [nome do orientador]</span><span class="ph">Instituição: [instituição]</span><a href="#membros">Currículo Lattes</a></li>
-<li class="person"><strong>Giosvaldo Júnior</strong><span class="ph">Orientador(a): [nome do orientador]</span><span class="ph">Instituição: [instituição]</span><a href="#membros">Currículo Lattes</a></li>
-<li class="person"><strong>André Chadú</strong><span class="ph">Orientador(a): [nome do orientador]</span><span class="ph">Instituição: [instituição]</span><a href="#membros">Currículo Lattes</a></li>
-<li class="person"><strong class="ph">[Nome]</strong><span class="ph">Orientador(a): [nome do orientador]</span><span class="ph">Instituição: [instituição]</span><a href="#membros">Currículo Lattes</a></li>
-<li class="person"><strong class="ph">[Nome]</strong><span class="ph">Orientador(a): [nome do orientador]</span><span class="ph">Instituição: [instituição]</span><a href="#membros">Currículo Lattes</a></li>
-</ul>
+<ul class="people" id="memberDoctoral"><li class="person"><strong>Gabriel Fogaça</strong><span>Orientador: Luis Alvarez</span></li><li class="person"><strong>Lucas Oliveira</strong><span>Orientador: Luis Alvarez</span></li><li class="person"><strong>Giosvaldo Júnior</strong><span>Orientador: TBA</span></li><li class="person"><strong>André Chadú</strong><span>Orientador: Mauro Rodrigues Junior</span></li></ul>
 </div>
 <div class="group">
 <h3 class="label">Mestrado</h3>
-<ul class="people" id="memberMasters">
-<li class="person"><strong>Gustavo Ranches</strong><span class="ph">Orientador(a): [nome do orientador]</span><span class="ph">Instituição: [instituição]</span><a href="#membros">Currículo Lattes</a></li>
-<li class="person"><strong>Lucas Oliveira</strong><span class="ph">Orientador(a): [nome do orientador]</span><span class="ph">Instituição: [instituição]</span><a href="#membros">Currículo Lattes</a></li>
-<li class="person"><strong>João Gabriel Gomes</strong><span class="ph">Orientador(a): [nome do orientador]</span><span class="ph">Instituição: [instituição]</span><a href="#membros">Currículo Lattes</a></li>
-<li class="person"><strong>Roberto Torres</strong><span class="ph">Orientador(a): [nome do orientador]</span><span class="ph">Instituição: [instituição]</span><a href="#membros">Currículo Lattes</a></li>
-<li class="person"><strong>Gustavo Pereira</strong><span class="ph">Orientador(a): [nome do orientador]</span><span class="ph">Instituição: [instituição]</span><a href="#membros">Currículo Lattes</a></li>
-<li class="person"><strong>Victor Hugo Moreschi</strong><span class="ph">Orientador(a): [nome do orientador]</span><span class="ph">Instituição: [instituição]</span><a href="#membros">Currículo Lattes</a></li>
-</ul>
+<ul class="people" id="memberMasters"><li class="person"><strong>Gustavo Ranches</strong><span>Orientador: Rodrigo De Losso</span></li><li class="person"><strong>Roberto Torres</strong><span>Orientador: Rodrigo De Losso</span></li><li class="person"><strong>Lucas Oliveira</strong><span>Orientador: Rodrigo De Losso</span></li><li class="person"><strong>João Gabriel Gomes</strong><span>Orientadora: Solange Golçalves</span></li><li class="person"><strong>Gustavo Pereira</strong><span>Orientador: Marcio Nakane</span></li><li class="person"><strong>Victor Hugo Moreschi</strong><span>Orientadora: Amanda Fantinatti</span></li></ul>
 </div>
 </div>
 </div>
@@ -271,12 +253,7 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 <h2>Pesquisas e publicações</h2>
 <div class="content">
 <!-- Para adicionar um trabalho, copie um bloco <li> inteiro. -->
-<ul class="rows pubs" id="publicationList">
-<li><span class="mono">2026</span><div><div class="title">Unclogging the Channel: The Role of Self-Employment in Monetary Policy</div><div class="meta">João Gabriel Gomes</div></div><span class="kind">Dissertação de mestrado</span></li>
-<li><span class="mono">2026</span><div><div class="title">Active Share, Return Predictability and Information Dynamics</div><div class="meta">Gustavo Ranches</div></div><span class="kind">Dissertação de mestrado</span></li>
-<li><span class="mono ph">[ano]</span><div><div class="title"><span class="ph">[Título do artigo]</span></div><div class="meta"><span class="ph">[Autores]</span>, <span class="ph">[periódico]</span></div></div><span class="kind">Artigo publicado</span></li>
-<li><span class="mono ph">[ano]</span><div><div class="title"><span class="ph">[Título do working paper]</span></div><div class="meta"><span class="ph">[Autores]</span>, <span class="ph">[série ou repositório]</span></div></div><span class="kind">Working paper</span></li>
-</ul>
+<ul class="rows pubs" id="publicationList"><li><span class="mono">2026</span><div><div class="title">Unclogging the Channel: The Role of Self-Employment in Monetary Policy</div><div class="meta">João Gabriel Gomes</div></div><span class="kind">Dissertação de mestrado</span></li><li><span class="mono">2026</span><div><div class="title">Active Share, Return Predictability and Information Dynamics</div><div class="meta">Gustavo Ranches</div></div><span class="kind">Dissertação de mestrado</span></li><li><span class="mono">2026</span><div><div class="title">Partial Fiscal Backing, Household Heterogeneity, and Inflation Dynamics in Brazil</div><div class="meta">André Chadú</div></div><span class="kind">Working paper</span></li></ul>
 </div>
 </div>
 </section>
@@ -296,15 +273,7 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 </section><section class="sec" id="conferencia">
 <div class="wrap sec-in">
 <h2>Conferência</h2>
-<div class="content">
-<div class="prose"><p>O grupo realizará uma conferência em <strong id="conf-data">abril de 2027</strong>. Mais informações serão divulgadas conforme confirmadas.</p></div>
-<dl class="facts">
-<div><dt class="label">Dias</dt><dd id="conferenceDays">TBA</dd></div>
-<div><dt class="label">Local</dt><dd id="conferencePlace">TBA</dd></div>
-<div><dt class="label">Palestrantes</dt><dd id="conferenceSpeakers">TBA</dd></div>
-<div><dt class="label">Chamada de trabalhos</dt><dd id="conferenceCall">TBA</dd></div>
-</dl>
-</div>
+<div class="content"><div class="prose"><p id="conferenceDescription">O grupo planeja realizar uma conferência em abril de 2027, aberta a alunos e pesquisadores de demais instituições. Mais informações serão divulgadas conforme confirmadas.</p></div></div>
 </div>
 </section>
 <section class="sec" id="eventos-passados">
@@ -444,19 +413,13 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
     node.appendChild(a);
   }
   function renderSite(data) {
-    byId('draftNotice').hidden = !data.draft_notice;
-    setText('draftMessage',data.draft_message);
     setText('heroLabel',data.hero_label);
     setText('heroDescription',data.hero_description);
     setText('aboutText',data.about_text);
     setText('meetingSchedule',data.meeting_schedule);
     setText('meetingPlace',data.meeting_place);
     setText('whoCanJoin',data.who_can_join);
-    setText('conf-data',data.conference_date);
-    setText('conferenceDays',data.conference_days);
-    setText('conferencePlace',data.conference_place);
-    setText('conferenceSpeakers',data.conference_speakers);
-    setText('conferenceCall',data.conference_call);
+    setText('conferenceDescription',data.conference_description || 'O grupo planeja realizar uma conferência em abril de 2027, aberta a alunos e pesquisadores de demais instituições. Mais informações serão divulgadas conforme confirmadas.');
     setText('contactIntro',data.contact_intro);
     setText('email',data.contact_email);
     setText('contactAddress',data.contact_address);
@@ -468,8 +431,8 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
       var target=groups[p.group]; if(!target) return;
       var li=mk('li','person');
       li.appendChild(mk('strong','',p.name || ''));
-      li.appendChild(mk('span','', 'Orientador(a): ' + (p.advisor || '[nome do orientador]')));
-      li.appendChild(mk('span','', 'Instituição: ' + (p.institution || '[instituição]')));
+      var prefix = (p.name === 'João Gabriel Gomes' || p.name === 'Victor Hugo Moreschi') ? 'Orientadora: ' : 'Orientador: ';
+      li.appendChild(mk('span','', prefix + (p.advisor || 'TBA')));
       appendLink(li,p.lattes_url,'Currículo Lattes');
       target.appendChild(li);
     });
@@ -527,14 +490,14 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
     if(!upcoming) {
       setText('featuredTitle','Novos encontros em breve');
       setText('featuredDate','A definir');
-      setText('featuredCategory','Programação em atualização');
+      setText('featuredLabel','Próximo encontro');
       setText('featuredDetails','Confira a programação dos próximos encontros.');
       link.hidden=true;
       return;
     }
     setText('featuredTitle', (upcoming.title && !/^\[|^TBA$/i.test(upcoming.title)) ? upcoming.title : 'Tema a confirmar');
     setText('featuredDate',upcoming.date_display || 'A confirmar');
-    setText('featuredCategory',upcoming.category || 'Encontro');
+    setText('featuredLabel','Próximo encontro - ' + (upcoming.category || 'Encontro').toLowerCase());
     setText('featuredDetails',upcoming.details || '');
     var href=validUrl(upcoming.url);
     link.hidden=!href;

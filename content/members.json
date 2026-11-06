@@ -2,85 +2,61 @@
   {
     "name": "Gabriel Fogaça",
     "group": "doutorado",
-    "advisor": "[nome do orientador]",
-    "institution": "[instituição]",
+    "advisor": "Luis Alvarez",
     "lattes_url": ""
   },
   {
     "name": "Lucas Oliveira",
     "group": "doutorado",
-    "advisor": "[nome do orientador]",
-    "institution": "[instituição]",
+    "advisor": "Luis Alvarez",
     "lattes_url": ""
   },
   {
     "name": "Giosvaldo Júnior",
     "group": "doutorado",
-    "advisor": "[nome do orientador]",
-    "institution": "[instituição]",
+    "advisor": "TBA",
     "lattes_url": ""
   },
   {
     "name": "André Chadú",
     "group": "doutorado",
-    "advisor": "[nome do orientador]",
-    "institution": "[instituição]",
-    "lattes_url": ""
-  },
-  {
-    "name": "[Nome]",
-    "group": "doutorado",
-    "advisor": "[nome do orientador]",
-    "institution": "[instituição]",
-    "lattes_url": ""
-  },
-  {
-    "name": "[Nome]",
-    "group": "doutorado",
-    "advisor": "[nome do orientador]",
-    "institution": "[instituição]",
+    "advisor": "Mauro Rodrigues Junior",
     "lattes_url": ""
   },
   {
     "name": "Gustavo Ranches",
     "group": "mestrado",
-    "advisor": "[nome do orientador]",
-    "institution": "[instituição]",
-    "lattes_url": ""
-  },
-  {
-    "name": "Lucas Oliveira",
-    "group": "mestrado",
-    "advisor": "[nome do orientador]",
-    "institution": "[instituição]",
-    "lattes_url": ""
-  },
-  {
-    "name": "João Gabriel Gomes",
-    "group": "mestrado",
-    "advisor": "[nome do orientador]",
-    "institution": "[instituição]",
+    "advisor": "Rodrigo De Losso",
     "lattes_url": ""
   },
   {
     "name": "Roberto Torres",
     "group": "mestrado",
-    "advisor": "[nome do orientador]",
-    "institution": "[instituição]",
+    "advisor": "Rodrigo De Losso",
+    "lattes_url": ""
+  },
+  {
+    "name": "Lucas Oliveira",
+    "group": "mestrado",
+    "advisor": "Rodrigo De Losso",
+    "lattes_url": ""
+  },
+  {
+    "name": "João Gabriel Gomes",
+    "group": "mestrado",
+    "advisor": "Solange Golçalves",
     "lattes_url": ""
   },
   {
     "name": "Gustavo Pereira",
     "group": "mestrado",
-    "advisor": "[nome do orientador]",
-    "institution": "[instituição]",
+    "advisor": "Marcio Nakane",
     "lattes_url": ""
   },
   {
     "name": "Victor Hugo Moreschi",
     "group": "mestrado",
-    "advisor": "[nome do orientador]",
-    "institution": "[instituição]",
+    "advisor": "Amanda Fantinatti",
     "lattes_url": ""
   }
 ]

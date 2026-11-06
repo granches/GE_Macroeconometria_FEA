@@ -14,16 +14,9 @@
     "url": ""
   },
   {
-    "year": "[ano]",
-    "title": "[Título do artigo]",
-    "authors": "[Autores], [periódico]",
-    "type": "Artigo publicado",
-    "url": ""
-  },
-  {
-    "year": "[ano]",
-    "title": "[Título do working paper]",
-    "authors": "[Autores], [série ou repositório]",
+    "year": "2026",
+    "title": "Partial Fiscal Backing, Household Heterogeneity, and Inflation Dynamics in Brazil",
+    "authors": "André Chadú",
     "type": "Working paper",
     "url": ""
   }
