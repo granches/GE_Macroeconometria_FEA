@@ -70,9 +70,6 @@ content:
         label: Nome do orientador
         type: string
         description: Deixe entre colchetes enquanto não houver confirmação.
-      - name: lattes_url
-        label: Endereço do Currículo Lattes (https://...)
-        type: string
   - name: publicacoes
     label: Pesquisas e publicações
     type: file

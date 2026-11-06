@@ -116,7 +116,7 @@ h1, h2 { font-family: var(--display); font-weight: 500; text-wrap: balance; }
   scroll-margin-top: 4.5rem;
 }
 .callout .label { color: var(--gold-fg); }
-.callout h2 { font-size: clamp(1.65rem, 3.25vw, 2.65rem); line-height: 1.02; margin-top: 0.6rem; }
+.callout h2 { font-size: clamp(1.35rem, 2.5vw, 2rem); line-height: 1.16; margin-top: 0.6rem; }
 .callout dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem 1.5rem; }
 .callout dl > div { border-top: 1px solid var(--gold-line); padding-top: 0.5rem; }
 .callout dd { font: 500 1.05rem/1.4 var(--mono); margin-top: 0.15rem; }
@@ -433,7 +433,6 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
       li.appendChild(mk('strong','',p.name || ''));
       var prefix = (p.name === 'João Gabriel Gomes' || p.name === 'Victor Hugo Moreschi') ? 'Orientadora: ' : 'Orientador: ';
       li.appendChild(mk('span','', prefix + (p.advisor || 'TBA')));
-      appendLink(li,p.lattes_url,'Currículo Lattes');
       target.appendChild(li);
     });
   }
