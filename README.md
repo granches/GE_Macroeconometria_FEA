@@ -61,3 +61,20 @@ media/                    Pasta opcional para futuros arquivos
 A pasta `materiais/` é destinada a slides, notas e outros documentos do grupo. Há subpastas `2026/` e `2027/`, cada uma com um `.gitkeep` para que apareça no GitHub mesmo vazia. Consulte `materiais/README.md` para o padrão de organização e instruções de upload.
 
 **Atenção:** publicar arquivos dentro de `materiais/` os torna acessíveis publicamente pelo repositório. A inclusão de links para esses arquivos nas páginas do site pode ser configurada posteriormente.
+
+
+## Migração do acervo antigo (06/11/2026)
+
+Este pacote é uma versão completa para substituir os arquivos anteriores do repositório `GE_Macroeconometria_FEA`, **sem precisar apagar o repositório**. O Drive antigo continua intacto. Foram importados dois conjuntos de slides de encontros e o cronograma em XLSX. Bibliografia e ementas foram adicionadas à seção **Materiais**, com links ou referências, sem copiar PDFs de terceiros. A seção e os slides por evento são editáveis no Pages CMS.
+
+### Como atualizar o GitHub
+
+1. Extraia este ZIP localmente. **Não envie o arquivo `.zip` fechado**.
+2. No repositório, escolha **Add file → Upload files** (na branch `main`).
+3. Arraste **todo o conteúdo** da pasta extraída, incluindo arquivos e as pastas `content`, `materiais` e `media`, para a raiz do repositório. Confirme sobrescrita dos arquivos com mesmo nome.
+4. Salve o commit, por exemplo: `Importa materiais do Drive e cria acervo no site`.
+5. Confira os slides na nova seção **Materiais** e em **Eventos passados**.
+
+Se o upload de uma pasta pelo navegador falhar, use o GitHub Desktop ou envie os arquivos/pastas individualmente. Arquivos ocultos `.pages.yml` e `.nojekyll` devem permanecer na raiz.
+
+Arquivos que já existiam no repositório mas não aparecem neste pacote **não são removidos automaticamente**. O ZIP não inclui conteúdos novos que você possa ter adicionado depois da publicação inicial; preserve-os ao fazer o upload.

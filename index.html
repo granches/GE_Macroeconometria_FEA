@@ -1,6 +1,11 @@
 <!DOCTYPE html>
+
 <html><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
 #contactAddress { white-space: pre-line; }
+
+/* Arquivo acadêmico: mantém o padrão tipográfico das listas de eventos. */
+.resources li { grid-template-columns: 8rem minmax(0, 1fr); }
+@media (max-width: 620px) { .resources li { grid-template-columns: minmax(0, 1fr); } }
 </style></head><body>
 <title>Grupo de Estudos em Macroeconometria</title>
 <meta content="cover" name="claude:viewport-fit-sides"/>
@@ -182,7 +187,7 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 <li><a href="#membros">Membros</a></li>
 <li><a href="#pesquisas">Pesquisas e publicações</a></li>
 <li><a href="#eventos">Eventos próximos</a></li>
-<li><a href="#eventos-passados">Eventos passados</a></li>
+<li><a href="#eventos-passados">Eventos passados</a></li><li><a href="#materiais">Materiais</a></li>
 <li><a href="#conferencia">Conferência</a></li>
 <li><a href="#contato">Contato</a></li>
 </ul>
@@ -299,15 +304,22 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 <div class="content">
 <!-- Do mais recente para o mais antigo. -->
 <ul class="rows events" id="pastEvents">
-<li><span class="mono">05/11/2026</span><div><div class="kind">Grupo de leitura</div><div class="title">Identification in Macroeconomics</div><div class="meta">Nakamura e Steinsson (2018), Journal of Economic Perspectives · Apresentação de Lucas Oliveira</div><div class="meta"><a href="https://doi.org/10.1257/jep.32.3.59" rel="noopener" target="_blank">Artigo</a></div></div></li>
-<li><span class="mono">29/10/2026</span><div><div class="kind">Grupo de leitura</div><div class="title">Twenty Years of Time Series Econometrics in Ten Pictures</div><div class="meta">Stock e Watson (2017), Journal of Economic Perspectives · Apresentação de Giosvaldo Júnior</div><div class="meta"><a href="https://doi.org/10.1257/jep.31.2.59" rel="noopener" target="_blank">Artigo</a></div></div></li>
+<li><span class="mono">05/11/2026</span><div><div class="kind">Grupo de leitura</div><div class="title">Identification in Macroeconomics</div><div class="meta">Nakamura e Steinsson (2018), Journal of Economic Perspectives · Apresentação de Lucas Oliveira</div><div class="meta"><a href="https://doi.org/10.1257/jep.32.3.59" rel="noopener" target="_blank">Artigo</a></div><div class="meta"><a href="./materiais/2026/2026-11-05-nakamura-steinsson/slides.pdf">Slides (PDF)</a></div></div></li>
+<li><span class="mono">29/10/2026</span><div><div class="kind">Grupo de leitura</div><div class="title">Twenty Years of Time Series Econometrics in Ten Pictures</div><div class="meta">Stock e Watson (2017), Journal of Economic Perspectives · Apresentação de Giosvaldo Júnior</div><div class="meta"><a href="https://doi.org/10.1257/jep.31.2.59" rel="noopener" target="_blank">Artigo</a></div><div class="meta"><a href="./materiais/2026/2026-10-29-stock-watson/slides.pdf">Slides (PDF)</a></div></div></li>
 <li><span class="mono">Anterior</span><div><div class="kind">Grupo de leitura</div><div class="title">Time Series Analysis</div><div class="meta">Hamilton (1994), Princeton University Press</div></div></li>
 <li><span class="mono">Anterior</span><div><div class="kind">Grupo de leitura</div><div class="title">Mostly Harmless Econometrics</div><div class="meta">Angrist e Pischke (2009), Princeton University Press</div></div></li>
 </ul>
 </div>
 </div>
 </section>
-<section class="sec" id="contato">
+<section class="sec" id="materiais">
+<div class="wrap sec-in"><h2>Materiais</h2><div class="content">
+<div class="prose"><p>Apresentações dos encontros, cronogramas de estudo e referências acadêmicas. Artigos e livros de terceiros são indicados por referência ou link, sem reprodução de seus PDFs.</p></div>
+<ul class="rows resources" id="resourceList">
+<li><span class="mono">05/11/2026</span><div><div class="kind">Apresentação</div><div class="title">Identification in Macroeconomics</div><div class="meta">Nakamura e Steinsson (2018) · Apresentação de Lucas Oliveira</div><div class="meta"><a href="./materiais/2026/2026-11-05-nakamura-steinsson/slides.pdf">Slides (PDF)</a></div></div></li>
+<li><span class="mono">29/10/2026</span><div><div class="kind">Apresentação</div><div class="title">Twenty Years of Time Series Econometrics in Ten Pictures</div><div class="meta">Stock e Watson (2017) · Apresentação de Giosvaldo Júnior</div><div class="meta"><a href="./materiais/2026/2026-10-29-stock-watson/slides.pdf">Slides (PDF)</a></div></div></li>
+<li><span class="mono">2026–2027</span><div><div class="kind">Cronograma</div><div class="title">Cronograma de Leituras</div><div class="meta"><a href="./materiais/cronograma-de-leituras.xlsx">Planilha (XLSX)</a></div></div></li>
+</ul></div></div></section><section class="sec" id="contato">
 <div class="wrap sec-in">
 <h2>Contato</h2>
 <div class="content">
@@ -494,14 +506,38 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
         main.appendChild(mk('div','kind',p.category||''));
         main.appendChild(mk('div','title',p.title||''));
         if(p.details) main.appendChild(mk('div','meta',p.details));
-        if(validUrl(p.url)) {
+        if(validUrl(p.url) || validUrl(p.slides_url)) {
           var links=mk('div','meta');
-          appendLink(links,p.url,p.link_label||'Artigo');
+          if(validUrl(p.url)) appendLink(links,p.url,p.link_label||'Artigo');
+          if(validUrl(p.slides_url)) {
+            if(links.childNodes.length) links.appendChild(document.createTextNode(' · '));
+            appendLink(links,p.slides_url,'Slides (PDF)');
+          }
           main.appendChild(links);
         }
         li.appendChild(main);
         targets[status].appendChild(li);
       });
+    });
+  }
+  function renderResources(data) {
+    var target=byId('resourceList');
+    if(!target || !Array.isArray(data)) return;
+    target.replaceChildren();
+    data.forEach(function(p) {
+      var li=mk('li');
+      li.appendChild(mk('span','mono',p.date_display||''));
+      var main=mk('div');
+      main.appendChild(mk('div','kind',p.type||''));
+      main.appendChild(mk('div','title',p.title||''));
+      if(p.details) main.appendChild(mk('div','meta',p.details));
+      if(validUrl(p.url)) {
+        var links=mk('div','meta');
+        appendLink(links,p.url,p.link_label||'Abrir material');
+        main.appendChild(links);
+      }
+      li.appendChild(main);
+      target.appendChild(li);
     });
   }
   function load(path, render) {
@@ -514,5 +550,6 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
   load('./content/members.json',renderMembers);
   load('./content/publications.json',renderPublications);
   load('./content/events.json',renderEvents);
+  load('./content/resources.json',renderResources);
 })();
 </script></body></html>

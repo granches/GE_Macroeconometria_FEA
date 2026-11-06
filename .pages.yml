@@ -154,7 +154,7 @@ content:
       - name: sort_date
         label: Data para ordenar (opcional)
         type: date
-        default: ""
+        default: ''
         description: Use em eventos com data definida. Não precisa preencher para eventos TBA ou Anterior.
         options:
           format: yyyy-MM-dd
@@ -181,6 +181,53 @@ content:
       - name: url
         label: Link do artigo ou inscrição (https://...)
         type: string
+      - name: link_label
+        label: Texto do link
+        type: string
+      - name: slides_url
+        label: Link dos slides (relativo ao site ou https://...)
+        type: string
+        description: 'Ex.: ./materiais/2026/2026-11-05-nakamura-steinsson/slides.pdf'
+  - name: materiais
+    label: Acervo de materiais
+    type: file
+    path: content/resources.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: type
+        label: Tipo de material
+        type: select
+        options:
+          values:
+            - name: Apresentação
+              label: Apresentação
+            - name: Cronograma
+              label: Cronograma
+            - name: Artigo
+              label: Artigo
+            - name: Livro
+              label: Livro
+            - name: Ementa
+              label: Ementa
+            - name: Outro
+              label: Outro
+      - name: date_display
+        label: Data ou ano
+        type: string
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: details
+        label: Descrição, autoria ou apresentador
+        type: text
+      - name: url
+        label: Link do arquivo ou referência
+        type: string
+        description: URL externa (https://...) ou caminho relativo (./materiais/...)
       - name: link_label
         label: Texto do link
         type: string
