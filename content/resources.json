@@ -1,0 +1,74 @@
+[
+  {
+    "type": "Apresentação",
+    "date_display": "05/11/2026",
+    "title": "Identification in Macroeconomics",
+    "details": "Nakamura e Steinsson (2018) · Apresentação de Lucas Oliveira",
+    "url": "./materiais/2026/2026-11-05-nakamura-steinsson/slides.pdf",
+    "link_label": "Slides (PDF)"
+  },
+  {
+    "type": "Apresentação",
+    "date_display": "29/10/2026",
+    "title": "Twenty Years of Time Series Econometrics in Ten Pictures",
+    "details": "Stock e Watson (2017) · Apresentação de Giosvaldo Júnior",
+    "url": "./materiais/2026/2026-10-29-stock-watson/slides.pdf",
+    "link_label": "Slides (PDF)"
+  },
+  {
+    "type": "Cronograma",
+    "date_display": "2026–2027",
+    "title": "Cronograma de Leituras",
+    "details": "Planilha de leituras introdutórias, iniciada em 26/10/2026 e com término previsto em 16/06/2027.",
+    "url": "./materiais/cronograma-de-leituras.xlsx",
+    "link_label": "Planilha (XLSX)"
+  },
+  {
+    "type": "Artigo",
+    "date_display": "2017",
+    "title": "Twenty Years of Time Series Econometrics in Ten Pictures",
+    "details": "Stock e Watson · Journal of Economic Perspectives",
+    "url": "https://doi.org/10.1257/jep.31.2.59",
+    "link_label": "DOI"
+  },
+  {
+    "type": "Livro",
+    "date_display": "2000",
+    "title": "Econometrics",
+    "details": "Fumio Hayashi · Referência bibliográfica; PDF do livro não replicado no repositório.",
+    "url": "",
+    "link_label": ""
+  },
+  {
+    "type": "Livro",
+    "date_display": "2017",
+    "title": "Structural Vector Autoregressive Analysis",
+    "details": "Lutz Kilian e Helmut Lütkepohl · Referência bibliográfica; PDF não replicado no repositório.",
+    "url": "",
+    "link_label": ""
+  },
+  {
+    "type": "Ementa",
+    "date_display": "2026",
+    "title": "econ31730_2026s_syllabus.pdf",
+    "details": "Ementa arquivada no Drive original do grupo.",
+    "url": "https://drive.google.com/file/d/1Mp0bFn-MqDQJcqFwInWvsn-IT9OlhJbw/view",
+    "link_label": "Consultar no Drive"
+  },
+  {
+    "type": "Ementa",
+    "date_display": "2024",
+    "title": "eco513_2024spring_syllabus.pdf",
+    "details": "Ementa arquivada no Drive original do grupo.",
+    "url": "https://drive.google.com/file/d/1HfogRKsGp1-bZSXH_Pi2aW3QeztMrHlN/view",
+    "link_label": "Consultar no Drive"
+  },
+  {
+    "type": "Ementa",
+    "date_display": "2023",
+    "title": "eco519_2023spring_syllabus.pdf",
+    "details": "Ementa arquivada no Drive original do grupo.",
+    "url": "https://drive.google.com/file/d/1GhfBfhPaIQbE6YjGXGDhT4JZivRQ-Usu/view",
+    "link_label": "Consultar no Drive"
+  }
+]

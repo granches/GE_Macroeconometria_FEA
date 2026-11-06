@@ -1,0 +1,30 @@
+[
+  {
+    "year": "2026",
+    "title": "Unclogging the Channel: The Role of Self-Employment in Monetary Policy",
+    "authors": "João Gabriel Gomes",
+    "type": "Dissertação de mestrado",
+    "url": ""
+  },
+  {
+    "year": "2026",
+    "title": "Active Share, Return Predictability and Information Dynamics",
+    "authors": "Gustavo Ranches",
+    "type": "Dissertação de mestrado",
+    "url": ""
+  },
+  {
+    "year": "[ano]",
+    "title": "[Título do artigo]",
+    "authors": "[Autores], [periódico]",
+    "type": "Artigo publicado",
+    "url": ""
+  },
+  {
+    "year": "[ano]",
+    "title": "[Título do working paper]",
+    "authors": "[Autores], [série ou repositório]",
+    "type": "Working paper",
+    "url": ""
+  }
+]
