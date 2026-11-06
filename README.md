@@ -1,80 +1,61 @@
-# Site do Grupo de Estudos em Macroeconometria
+# Grupo de Estudos em Macroeconometria
 
-Versão preparada para **GitHub Pages + Pages CMS**, a partir do HTML fornecido. O visual, os textos e as seções originais foram mantidos; o conteúdo editável está nos arquivos JSON da pasta `content/`.
+**Departamento de Economia · FEA-USP**
 
-## 1 — Publicar no GitHub Pages (sem pagar)
+O Grupo de Estudos em Macroeconometria reúne estudantes de mestrado e doutorado interessados nos métodos empíricos da macroeconomia e das finanças e em suas aplicações à pesquisa econômica. Nossos encontros são dedicados à leitura e discussão de artigos, à apresentação de pesquisas em andamento e ao intercâmbio de ideias entre estudantes, professores e demais interessados.
 
-1. Crie uma conta em https://github.com/ (caso ainda não tenha).
-2. No GitHub, clique em **New repository**. Nome sugerido: `GE_Macroeconometria_FEA`. Escolha **Public** (plano gratuito).
-3. Extraia o arquivo ZIP. No repositório, escolha **Add file → Upload files**, e envie **todos os arquivos e pastas de dentro da pasta extraída**, mantendo `index.html`, `.pages.yml` e `content/` na raiz. Não envie o ZIP fechado e não crie uma segunda subpasta dentro do repositório.
-   - Se o Windows ocultar os arquivos iniciados com ponto, certifique-se de incluir especificamente `.pages.yml` (é obrigatório para o painel) e, se possível, `.nojekyll` (recomendado).
-4. Confirme as alterações pelo botão **Commit changes**.
-5. Em **Settings → Pages → Build and deployment**, defina **Source: Deploy from a branch**; **Branch: main** e **Folder: / (root)**, depois **Save**.
-6. O endereço será `https://SEUUSUARIO.github.io/GE_Macroeconometria_FEA/` (substitua `SEUUSUARIO` pelo nome da conta; se mudar o nome do repositório, mude o final da URL).
-7. Verifique a publicação nas configurações Pages. Propagação inicial pode levar alguns minutos.
+Este repositório reúne o **site do grupo**, as apresentações realizadas nos encontros e materiais de apoio às atividades acadêmicas.
 
-## 2 — Ativar o painel Pages CMS
+**[Acessar o site](https://granches.github.io/GE_Macroeconometria_FEA/)** · **[Consultar o acervo](./materiais/)** · **[Ver a programação](https://granches.github.io/GE_Macroeconometria_FEA/#eventos)**
 
-1. Acesse https://app.pagescms.org/ e entre com a mesma conta do GitHub.
-2. Autorize/instale o aplicativo Pages CMS para o repositório `GE_Macroeconometria_FEA` (prefira conceder acesso somente a esse repositório).
-3. Selecione o repositório e a branch `main`.
-4. As opções no painel serão **Informações gerais e conferência**, **Membros**, **Pesquisas e publicações** e **Eventos — próximos e passados**.
-5. Altere uma informação, salve e confira o site público. A gravação modifica os arquivos JSON no GitHub, e o GitHub Pages publica a atualização automaticamente.
+## Acervo acadêmico
 
-## 3 — Como atualizar o site normalmente
+O acervo é organizado por ano e encontro. Sempre que disponíveis e autorizados para divulgação, reunimos os slides e outros materiais elaborados pelos apresentadores, além de referências para os textos discutidos.
 
-- **Eventos:** acesse `Eventos — próximos e passados`, inclua ou edite um registro. Preencha `Exibir em` com `Eventos próximos` ou `Eventos passados`; quando a reunião acabar, altere o mesmo registro para `Eventos passados`. Informe uma `Data para ordenar` quando disponível; `TBA` pode ficar sem data. O site ordena os próximos crescentemente e os passados decrescentemente.
-- **Membros:** abra `Membros`; escolha a categoria Professor, Doutorado ou Mestrado. O campo Lattes só vira link no site quando receber uma URL HTTPS válida.
-- **Pesquisas:** abra `Pesquisas e publicações` e adicione ano, autores, tipo e, se houver, o link.
-- **Conferência / horários / contato:** abra `Informações gerais e conferência`.
-- **Rascunho:** o aviso de rascunho segue inicialmente ativo, porque o HTML original tem campos `[Nome]`, `[tema de pesquisa]` e `TBA`. Depois de completar os dados, desative `Mostrar aviso de rascunho`.
+Também está disponível o [cronograma de leituras (XLSX)](./materiais/cronograma-de-leituras.xlsx), com bibliografia e planejamento de estudo. Os encontros e materiais mais recentes podem ser consultados no site.
 
-## Estrutura dos arquivos
+## Organização do repositório
 
-```text
-index.html                Site público; layout original, com atualização automática a partir dos JSON
-.pages.yml                Configuração dos formulários do Pages CMS
-.nojekyll                 Desativa transformação por Jekyll no GitHub Pages
-content/site.json         Sobre, conferência, horários e contato
-content/members.json      Membros
-content/publications.json Publicações
-content/events.json       Eventos próximos e passados
-media/                    Pasta opcional para futuros arquivos
-```
+| Caminho | Finalidade |
+| --- | --- |
+| `index.html` | Página pública do grupo |
+| `.pages.yml` | Configuração do painel de edição |
+| `content/site.json` | Informações gerais e conferência |
+| `content/members.json` | Membros |
+| `content/publications.json` | Pesquisas e publicações |
+| `content/events.json` | Encontros e eventos |
+| `content/resources.json` | Catálogo do acervo |
+| `materiais/` | Apresentações e documentos, organizados por ano e encontro |
+| `media/` | Arquivos de mídia do site |
 
-## Observações importantes
+## Como atualizar o site e contribuir
 
-- Não é necessário contratar hospedagem, domínio, banco de dados ou pagar o Pages CMS para este uso.
-- Os arquivos de conteúdo são públicos, pois fazem parte do repositório público; não coloque dados privados nele.
-- **O HTML pode ser aberto diretamente no computador**, mas os navegadores geralmente bloqueiam a leitura dos arquivos JSON via `file://`. Nesse caso, aparece a versão original de reserva, não necessariamente as edições recentes. Para testar a edição, use a URL pública do GitHub Pages ou rode um servidor local, por exemplo `python -m http.server 8000`, dentro da pasta, e entre em `http://localhost:8000/`.
-- Sem JavaScript, o site exibe o conteúdo original incorporado no HTML. Com JavaScript habilitado, os JSON editados passam a fornecer o conteúdo atualizado.
-- Arquivos de código e aparência só precisam ser editados quando você decidir mudar a estrutura ou o visual.
+O site é publicado gratuitamente pelo **GitHub Pages**. A edição de textos e registros é feita pelo **[Pages CMS](https://app.pagescms.org/)**, conectado à branch `main` deste repositório.
 
-## Documentação oficial
+**Para atualizar a programação, membros ou publicações:**
 
-- GitHub Pages: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-- Pages CMS: https://pagescms.org/docs/quick-start/
-- Configuração Pages CMS: https://pagescms.org/docs/configuration/
+1. Entre no Pages CMS com uma conta autorizada no repositório.
+2. Escolha a seção correspondente e edite os campos no formulário.
+3. Salve as alterações. Elas serão registradas no GitHub e publicadas no site.
+4. Ao final de um encontro, altere sua classificação de **Evento próximo** para **Evento passado**.
 
-## 4 — Acervo acadêmico do grupo
+**Para acrescentar slides ou notas de um encontro:**
 
-A pasta `materiais/` é destinada a slides, notas e outros documentos do grupo. Há subpastas `2026/` e `2027/`, cada uma com um `.gitkeep` para que apareça no GitHub mesmo vazia. Consulte `materiais/README.md` para o padrão de organização e instruções de upload.
+1. Crie uma pasta `materiais/AAAA/AAAA-MM-DD-tema/` no repositório local.
+2. Adicione os arquivos próprios do grupo (por exemplo, `slides.pdf` e `notas.md`).
+3. Envie as alterações ao GitHub, por exemplo pelo GitHub Desktop (**Commit** e **Push origin**).
+4. No Pages CMS, informe o caminho do arquivo no registro do evento ou no **Acervo de materiais**, por exemplo `./materiais/2026/2026-11-05-nakamura-steinsson/slides.pdf`.
 
-**Atenção:** publicar arquivos dentro de `materiais/` os torna acessíveis publicamente pelo repositório. A inclusão de links para esses arquivos nas páginas do site pode ser configurada posteriormente.
+Para contribuir, é necessário ter permissão de edição no repositório. Quem não tiver acesso pode encaminhar materiais ou sugestões pelo e-mail do grupo.
 
+## Uso dos materiais
 
-## Migração do acervo antigo (06/11/2026)
+Este é um repositório público, destinado à divulgação das atividades acadêmicas do grupo. A autoria dos slides, notas e demais trabalhos deve ser preservada. A disponibilização de um arquivo **não implica autorização irrestrita para sua reprodução ou redistribuição**.
 
-Este pacote é uma versão completa para substituir os arquivos anteriores do repositório `GE_Macroeconometria_FEA`, **sem precisar apagar o repositório**. O Drive antigo continua intacto. Foram importados dois conjuntos de slides de encontros e o cronograma em XLSX. Bibliografia e ementas foram adicionadas à seção **Materiais**, com links ou referências, sem copiar PDFs de terceiros. A seção e os slides por evento são editáveis no Pages CMS.
+Artigos e livros de terceiros são preferencialmente referenciados por DOI, páginas dos periódicos ou outras fontes autorizadas, sem reprodução de cópias protegidas por direitos autorais.
 
-### Como atualizar o GitHub
+---
 
-1. Extraia este ZIP localmente. **Não envie o arquivo `.zip` fechado**.
-2. No repositório, escolha **Add file → Upload files** (na branch `main`).
-3. Arraste **todo o conteúdo** da pasta extraída, incluindo arquivos e as pastas `content`, `materiais` e `media`, para a raiz do repositório. Confirme sobrescrita dos arquivos com mesmo nome.
-4. Salve o commit, por exemplo: `Importa materiais do Drive e cria acervo no site`.
-5. Confira os slides na nova seção **Materiais** e em **Eventos passados**.
+**Grupo de Estudos em Macroeconometria · FEA-USP**
 
-Se o upload de uma pasta pelo navegador falhar, use o GitHub Desktop ou envie os arquivos/pastas individualmente. Arquivos ocultos `.pages.yml` e `.nojekyll` devem permanecer na raiz.
-
-Arquivos que já existiam no repositório mas não aparecem neste pacote **não são removidos automaticamente**. O ZIP não inclui conteúdos novos que você possa ter adicionado depois da publicação inicial; preserve-os ao fazer o upload.
+[Site](https://granches.github.io/GE_Macroeconometria_FEA/) · [Contato](mailto:granches@usp.br)
