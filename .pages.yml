@@ -3,7 +3,7 @@ media:
   output: /media
 content:
   - name: informacoes
-    label: Informações gerais e conferência
+    label: Informações gerais
     type: file
     path: content/site.json
     format: json
@@ -27,12 +27,6 @@ content:
         type: string
       - name: who_can_join
         label: Quem pode participar
-        type: text
-      - name: conference_date
-        label: Conferência — mês ou data
-        type: string
-      - name: conference_description
-        label: Texto da conferência
         type: text
       - name: contact_intro
         label: Texto de contato
@@ -107,6 +101,40 @@ content:
       - name: url
         label: Link do artigo ou PDF (https://...)
         type: string
+  - name: leituras
+    label: Leituras — 2026
+    type: file
+    path: content/reading_schedule.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: start_date
+        label: Início (AAAA-MM-DD)
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: end_date
+        label: Fim (AAAA-MM-DD)
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: source
+        label: Livro ou artigo
+        type: string
+        required: true
+      - name: chapters
+        label: Seções / capítulos
+        type: string
+      - name: topic
+        label: Tema da leitura
+        type: string
+      - name: completed
+        label: Leitura concluída
+        type: boolean
   - name: eventos
     label: Eventos — próximos e passados
     type: file

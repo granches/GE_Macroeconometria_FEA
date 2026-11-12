@@ -1,0 +1,42 @@
+[
+  {
+    "start_date": "2026-11-03",
+    "end_date": "2026-11-09",
+    "source": "Hayashi (2000), Econometrics",
+    "chapters": "Caps. 6.1–6.4",
+    "topic": "Modelos estacionários",
+    "completed": true
+  },
+  {
+    "start_date": "2026-11-10",
+    "end_date": "2026-11-17",
+    "source": "Kilian & Lütkepohl (2017), Structural VAR Analysis",
+    "chapters": "Caps. 2.1–2.5",
+    "topic": "Introdução e estimação VAR",
+    "completed": false
+  },
+  {
+    "start_date": "2026-11-17",
+    "end_date": "2026-11-18",
+    "source": "Kilian & Lütkepohl (2017), Structural VAR Analysis",
+    "chapters": "Cap. 2.6",
+    "topic": "Seleção de modelos",
+    "completed": false
+  },
+  {
+    "start_date": "2026-11-18",
+    "end_date": "2026-12-08",
+    "source": "Hayashi (2000), Econometrics",
+    "chapters": "Cap. 2",
+    "topic": "Dependência fraca",
+    "completed": false
+  },
+  {
+    "start_date": "2026-12-08",
+    "end_date": "2026-12-14",
+    "source": "Hamilton (1994), Time Series Analysis",
+    "chapters": "Cap. 6 — Spectral Analysis",
+    "topic": "Análise no domínio da frequência",
+    "completed": false
+  }
+]

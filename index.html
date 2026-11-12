@@ -102,7 +102,7 @@ h1, h2 { font-family: var(--display); font-weight: 500; text-wrap: balance; }
 .hero p { max-width: 44ch; font-size: 1.08rem; }
 @media (max-width: 760px) { .hero { padding-bottom: 15rem; } }
 
-/* Conferência em destaque */
+/* Destaque do próximo encontro */
 .callout-wrap { position: relative; z-index: 1; margin-top: clamp(-4.5rem, -6vw, -3rem); }
 .callout {
   background: var(--gold);
@@ -134,6 +134,28 @@ h1, h2 { font-family: var(--display); font-weight: 500; text-wrap: balance; }
 .facts dd { margin-top: 0.15rem; }
 .facts .wide { grid-column: 1 / -1; }
 @media (max-width: 520px) { .facts { grid-template-columns: minmax(0, 1fr); } }
+
+
+/* Leitura da semana: painel editorial separado do destaque amarelo do próximo encontro */
+.reading-feature {
+  background: var(--hero-bg); color: var(--hero-fg);
+  border-radius: 3px; padding: clamp(1.25rem, 3vw, 2rem);
+  border-left: 4px solid var(--gold); display: grid; gap: 1rem;
+}
+.reading-feature .label { color: var(--hero-muted); }
+.reading-feature-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1.4rem; }
+.reading-feature .reading-week { font: 400 .82rem/1.5 var(--mono); color: var(--hero-muted); }
+.reading-feature-items { display: grid; grid-template-columns: minmax(0, 1fr); gap: .7rem; }
+.reading-feature-item { padding-top: .8rem; border-top: 1px solid rgba(255,255,255,.22); }
+.reading-feature-item h3 { font: 500 clamp(1.2rem,2.5vw,1.55rem)/1.3 var(--display); }
+.reading-feature-item p { color: var(--hero-muted); font-size: .91rem; margin-top: .25rem; }
+.reading-feature .reading-empty { color: var(--hero-muted); }
+.reading-schedule { margin-top: 0; }
+.reading-schedule li { grid-template-columns: 8rem minmax(0, 1fr); }
+.reading-schedule li.is-current .title { color: var(--accent); }
+.reading-schedule li.is-past { opacity: .72; }
+.reading-note { color: var(--muted); font-size: .9rem; }
+@media (max-width: 620px) { .reading-schedule li { grid-template-columns: minmax(0,1fr); } }
 
 /* Membros */
 .group { display: grid; gap: 0.75rem; }
@@ -175,16 +197,16 @@ button:hover { background: var(--tint); }
 
 footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 </style>
-<!-- Rascunho: apague este aviso quando todos os campos destacados estiverem preenchidos. -->
 
 <nav aria-label="Seções do site" class="nav">
 <div class="wrap nav-in">
 <a class="brand" href="#topo">Macroeconometria · FEA-USP</a>
 <ul>
 <li><a href="#sobre">Sobre</a></li>
+<li><a href="#leituras">Leituras</a></li>
 <li><a href="#membros">Membros</a></li>
 <li><a href="#pesquisas">Pesquisas e publicações</a></li>
-<li><a href="#eventos">Eventos próximos</a></li><li><a href="#conferencia">Conferência</a></li>
+<li><a href="#eventos">Eventos próximos</a></li>
 <li><a href="#eventos-passados">Eventos passados</a></li>
 <li><a href="#contato">Contato</a></li>
 </ul>
@@ -203,16 +225,15 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 <div class="wrap callout-wrap">
 <section aria-labelledby="featuredTitle" class="callout" id="destaque">
 <div class="featured-main">
-<div class="label" id="featuredLabel">Próximo encontro - Grupo de leitura</div>
-<h2 id="featuredTitle">Asset Pricing in the Frequency Domain: Theory and Empirics</h2>
+<div class="label" id="featuredLabel">Próximo encontro - grupo de leitura</div>
+<h2 id="featuredTitle">Weak Instruments in Instrumental Variables Regression: Theory and Practice</h2>
 </div>
 <div class="featured-side">
 <dl class="featured-details">
-<div><dt class="label">Data e horário</dt><dd id="featuredDate">10/11/2026, 18h</dd></div>
-
-<div><dt class="label">Detalhes</dt><dd id="featuredDetails">Dew-Becker, I. e Giglio, S. (2016), Review of Financial Studies · Apresentação de Gabriel Fogaça · Sala Delfim Netto</dd></div>
+<div><dt class="label">Data e horário</dt><dd id="featuredDate">17/11/2026, 18h</dd></div>
+<div><dt class="label">Detalhes</dt><dd id="featuredDetails">Andrews, Stock e Sun (2019), Annual Review of Economics · Apresentação de Lucas Oliveira · Sala Delfim Netto</dd></div>
 </dl>
-<div class="featured-links"><a href="https://doi.org/10.1093/rfs/hhw027" id="featuredArticle" rel="noopener noreferrer" target="_blank">Artigo</a></div>
+<div class="featured-links"><a href="https://ideas.repec.org/a/anr/reveco/v11y2019p727-753.html" id="featuredArticle" rel="noopener noreferrer" target="_blank">Artigo</a></div>
 </div>
 </section>
 </div>
@@ -229,6 +250,29 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 <div><dt class="label">Local</dt><dd id="meetingPlace">Sala Delfim Netto, FEA-USP</dd></div>
 <div class="wide"><dt class="label">Quem pode participar</dt><dd id="whoCanJoin">Qualquer pessoa interessada no tema, seja professor, aluno ou profissional.</dd></div>
 </dl>
+</div>
+</div>
+</section>
+<section class="sec" id="leituras">
+<div class="wrap sec-in">
+<h2>Leituras</h2>
+<div class="content">
+<div aria-live="polite" class="reading-feature">
+<div class="reading-feature-head">
+<span class="label">Leitura da semana</span>
+<span class="reading-week" id="readingWeek">Cronograma de 2026</span>
+</div>
+<div class="reading-feature-items" id="readingFeatureItems"><p class="reading-empty">Consultando o cronograma semanal…</p></div>
+</div>
+<div>
+<h3 class="label" style="margin-bottom:.65rem">Cronograma de leituras · 2026</h3>
+<ul class="rows reading-schedule" id="readingSchedule"><li><span class="mono">03/11–09/11</span><div><div class="title">Hayashi (2000), Econometrics</div><div class="meta">Caps. 6.1–6.4 · Modelos estacionários</div></div></li>
+<li><span class="mono">10/11–17/11</span><div><div class="title">Kilian &amp; Lütkepohl (2017), Structural VAR Analysis</div><div class="meta">Caps. 2.1–2.5 · Introdução e estimação VAR</div></div></li>
+<li><span class="mono">17/11–18/11</span><div><div class="title">Kilian &amp; Lütkepohl (2017), Structural VAR Analysis</div><div class="meta">Cap. 2.6 · Seleção de modelos</div></div></li>
+<li><span class="mono">18/11–08/12</span><div><div class="title">Hayashi (2000), Econometrics</div><div class="meta">Cap. 2 · Dependência fraca</div></div></li>
+<li><span class="mono">08/12–14/12</span><div><div class="title">Hamilton (1994), Time Series Analysis</div><div class="meta">Cap. 6 — Spectral Analysis · Análise no domínio da frequência</div></div></li></ul>
+<p class="reading-note" style="margin-top:1rem">Leituras programadas até dezembro de 2026. O cronograma de 2027 será divulgado posteriormente.</p>
+</div>
 </div>
 </div>
 </section>
@@ -262,18 +306,8 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 <h2>Eventos próximos</h2>
 <div class="content">
 <!-- Mantenha os eventos em ordem de data. Quando um evento passar, mova o bloco para Eventos passados. -->
-<ul class="rows events" id="upcomingEvents"><li><span class="mono">10/11/2026, 18h</span><div><div class="kind">Grupo de leitura</div><div class="title">Asset Pricing in the Frequency Domain: Theory and Empirics</div><div class="meta">Dew-Becker, I. e Giglio, S. (2016), Review of Financial Studies · Apresentação de Gabriel Fogaça · Sala Delfim Netto</div><div class="meta"><a href="https://doi.org/10.1093/rfs/hhw027" rel="noopener noreferrer" target="_blank">Artigo</a></div></div></li>
-<li><span class="mono">12/11/2026, 10h</span><div><div class="kind">Grupo de leitura</div><div class="title"><span class="ph">[Artigo a ser discutido]</span></div><div class="meta">Apresentação de Gabriel Fogaça · Sala Delfim Netto</div></div></li>
-<li><span class="mono">19/11/2026, 10h</span><div><div class="kind">Grupo de leitura</div><div class="title">Weak Instruments in Instrumental Variables Regression: Theory and Practice</div><div class="meta">Andrews, Stock e Sun (2019), Annual Review of Economics · Apresentação de Lucas Oliveira · Sala Delfim Netto</div><div class="meta"><a href="https://ideas.repec.org/a/anr/reveco/v11y2019p727-753.html" rel="noopener" target="_blank">Artigo</a></div></div></li>
-<li><span class="mono">TBA</span><div><div class="kind">Seminário interno</div><div class="title">TBA</div></div></li>
-<li><span class="mono">TBA</span><div><div class="kind">Palestra convidada</div><div class="title">TBA</div></div></li>
-</ul>
+<ul class="rows events" id="upcomingEvents"><li><span class="mono">10/11/2026, 18h</span><div><div class="kind">Grupo de leitura</div><div class="title">VAR Identification in High Frequency</div><div class="meta">Apresentação de Gabriel Fogaça · Sala Delfim Netto</div></div></li><li><span class="mono">17/11/2026, 18h</span><div><div class="kind">Grupo de leitura</div><div class="title">Weak Instruments in Instrumental Variables Regression: Theory and Practice</div><div class="meta">Andrews, Stock e Sun (2019), Annual Review of Economics · Apresentação de Lucas Oliveira · Sala Delfim Netto</div><div class="meta"><a href="https://ideas.repec.org/a/anr/reveco/v11y2019p727-753.html" rel="noopener noreferrer" target="_blank">Artigo</a></div></div></li><li><span class="mono">24/11/2026, 18h</span><div><div class="kind">Grupo de leitura</div><div class="title">Bootstrap</div><div class="meta">Apresentação de Marcelo Fiorelli · Sala Delfim Netto</div></div></li><li><span class="mono">01/12/2026, 18h</span><div><div class="kind">Grupo de leitura</div><div class="title">Prior Selection for Vector Autoregressions</div><div class="meta">Giannone, Lenza e Primiceri (2015), Review of Economics and Statistics · Apresentação de Giosvaldo Júnior · Sala Delfim Netto</div></div></li><li><span class="mono">08/12/2026, 18h</span><div><div class="kind">Grupo de leitura</div><div class="title">Money, Income, and Causality</div><div class="meta">Sims (1972), American Economic Review · Apresentação de Gustavo Ranches · Sala Delfim Netto</div></div></li></ul>
 </div>
-</div>
-</section><section class="sec" id="conferencia">
-<div class="wrap sec-in">
-<h2>Conferência</h2>
-<div class="content"><div class="prose"><p id="conferenceDescription">O grupo planeja realizar uma conferência em abril de 2027, aberta a alunos e pesquisadores de demais instituições. Mais informações serão divulgadas conforme confirmadas.</p></div></div>
 </div>
 </section>
 <section class="sec" id="eventos-passados">
@@ -281,12 +315,7 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
 <h2>Eventos passados</h2>
 <div class="content">
 <!-- Do mais recente para o mais antigo. -->
-<ul class="rows events" id="pastEvents">
-<li><span class="mono">05/11/2026</span><div><div class="kind">Grupo de leitura</div><div class="title">Identification in Macroeconomics</div><div class="meta">Nakamura e Steinsson (2018), Journal of Economic Perspectives · Apresentação de Lucas Oliveira</div><div class="meta"><a href="https://doi.org/10.1257/jep.32.3.59" rel="noopener" target="_blank">Artigo</a></div><div class="meta"><a href="./materiais/2026/2026-11-05-nakamura-steinsson/slides.pdf">Slides (PDF)</a></div></div></li>
-<li><span class="mono">29/10/2026</span><div><div class="kind">Grupo de leitura</div><div class="title">Twenty Years of Time Series Econometrics in Ten Pictures</div><div class="meta">Stock e Watson (2017), Journal of Economic Perspectives · Apresentação de Giosvaldo Júnior</div><div class="meta"><a href="https://doi.org/10.1257/jep.31.2.59" rel="noopener" target="_blank">Artigo</a></div><div class="meta"><a href="./materiais/2026/2026-10-29-stock-watson/slides.pdf">Slides (PDF)</a></div></div></li>
-<li><span class="mono">Anterior</span><div><div class="kind">Grupo de leitura</div><div class="title">Time Series Analysis</div><div class="meta">Hamilton (1994), Princeton University Press</div></div></li>
-<li><span class="mono">Anterior</span><div><div class="kind">Grupo de leitura</div><div class="title">Mostly Harmless Econometrics</div><div class="meta">Angrist e Pischke (2009), Princeton University Press</div></div></li>
-</ul>
+<ul class="rows events" id="pastEvents"><li><span class="mono">29/10/2026</span><div><div class="kind">Grupo de leitura</div><div class="title">Twenty Years of Time Series Econometrics in Ten Pictures</div><div class="meta">Stock e Watson (2017), Journal of Economic Perspectives · Apresentação de Giosvaldo Júnior · Sala Delfim Netto</div><div class="meta"><a href="https://doi.org/10.1257/jep.31.2.59" rel="noopener noreferrer" target="_blank">Artigo</a></div><div class="meta"><a href="./materiais/2026/2026-10-29-stock-watson/slides.pdf">Slides (PDF)</a></div></div></li><li><span class="mono">05/11/2026</span><div><div class="kind">Grupo de leitura</div><div class="title">Identification in Macroeconomics</div><div class="meta">Nakamura e Steinsson (2018), Journal of Economic Perspectives · Apresentação de Lucas Oliveira · Sala Delfim Netto</div><div class="meta"><a href="https://doi.org/10.1257/jep.32.3.59" rel="noopener noreferrer" target="_blank">Artigo</a></div><div class="meta"><a href="./materiais/2026/2026-11-05-nakamura-steinsson/slides.pdf">Slides (PDF)</a></div></div></li></ul>
 </div>
 </div>
 </section>
@@ -419,7 +448,7 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
     setText('meetingSchedule',data.meeting_schedule);
     setText('meetingPlace',data.meeting_place);
     setText('whoCanJoin',data.who_can_join);
-    setText('conferenceDescription',data.conference_description || 'O grupo planeja realizar uma conferência em abril de 2027, aberta a alunos e pesquisadores de demais instituições. Mais informações serão divulgadas conforme confirmadas.');
+
     setText('contactIntro',data.contact_intro);
     setText('email',data.contact_email);
     setText('contactAddress',data.contact_address);
@@ -544,4 +573,78 @@ footer { padding-block: 1.75rem; font-size: 0.85rem; color: var(--muted); }
     setInterval(function(){renderEvents(data);},60*1000);
   });
 })();
-</script></body></html>
+</script>
+<script>
+(function () {
+  'use strict';
+  var fallback = [{"start_date": "2026-11-03", "end_date": "2026-11-09", "source": "Hayashi (2000), Econometrics", "chapters": "Caps. 6.1–6.4", "topic": "Modelos estacionários", "completed": true}, {"start_date": "2026-11-10", "end_date": "2026-11-17", "source": "Kilian & Lütkepohl (2017), Structural VAR Analysis", "chapters": "Caps. 2.1–2.5", "topic": "Introdução e estimação VAR", "completed": false}, {"start_date": "2026-11-17", "end_date": "2026-11-18", "source": "Kilian & Lütkepohl (2017), Structural VAR Analysis", "chapters": "Cap. 2.6", "topic": "Seleção de modelos", "completed": false}, {"start_date": "2026-11-18", "end_date": "2026-12-08", "source": "Hayashi (2000), Econometrics", "chapters": "Cap. 2", "topic": "Dependência fraca", "completed": false}, {"start_date": "2026-12-08", "end_date": "2026-12-14", "source": "Hamilton (1994), Time Series Analysis", "chapters": "Cap. 6 — Spectral Analysis", "topic": "Análise no domínio da frequência", "completed": false}];
+  var records = fallback;
+  var box = document.getElementById('readingFeatureItems');
+  var schedule = document.getElementById('readingSchedule');
+  var weekLabel = document.getElementById('readingWeek');
+  if (!box || !schedule || !weekLabel) return;
+  function text(tag, cls, value) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    n.textContent = value == null ? '' : String(value);
+    return n;
+  }
+  function isoDayInSaoPaulo() {
+    var parts = new Intl.DateTimeFormat('en-US', {timeZone:'America/Sao_Paulo', year:'numeric', month:'2-digit', day:'2-digit'}).formatToParts(new Date());
+    var d = {};
+    parts.forEach(function(p){d[p.type]=p.value;});
+    return d.year+'-'+d.month+'-'+d.day;
+  }
+  function dateUTC(iso) { return new Date(iso+'T12:00:00Z'); }
+  function addDays(iso, n) {
+    var d=dateUTC(iso); d.setUTCDate(d.getUTCDate()+n);
+    return d.toISOString().slice(0,10);
+  }
+  function fmt(iso, full) {
+    var bits=iso.split('-');
+    return bits[2]+'/'+bits[1]+(full?'/'+bits[0]:'');
+  }
+  function render() {
+    var today=isoDayInSaoPaulo();
+    var dow=dateUTC(today).getUTCDay();
+    var monday=addDays(today,-((dow+6)%7));
+    var sunday=addDays(monday,6);
+    var clean=records.filter(function(r){ return /^\d{4}-\d{2}-\d{2}$/.test(r.start_date||'') && /^\d{4}-\d{2}-\d{2}$/.test(r.end_date||''); });
+    clean.sort(function(a,b){return a.start_date.localeCompare(b.start_date);});
+    var weekly=clean.filter(function(r){return r.start_date <= sunday && r.end_date >= monday;});
+    weekLabel.textContent=fmt(monday)+'–'+fmt(sunday,true);
+    box.replaceChildren();
+    if (!weekly.length) {
+      box.append(text('p','reading-empty',today > '2026-12-14' ? 'As leituras de 2026 foram concluídas. Programação de 2027 em preparação.' : 'Não há leitura programada para esta semana.'));
+    } else {
+      weekly.forEach(function(r){
+        var item=text('div','reading-feature-item');
+        item.append(text('h3','',r.source||''));
+        item.append(text('p','', (r.chapters||'')+(r.topic?' · '+r.topic:'')+' · '+fmt(r.start_date)+'–'+fmt(r.end_date)));
+        box.append(item);
+      });
+    }
+    schedule.replaceChildren();
+    clean.forEach(function(r){
+      var cls='';
+      if (r.end_date < today) cls='is-past';
+      else if (r.start_date <= today) cls='is-current';
+      var li=text('li',cls);
+      li.append(text('span','mono',fmt(r.start_date)+'–'+fmt(r.end_date)));
+      var main=text('div','');
+      main.append(text('div','title',r.source||''));
+      main.append(text('div','meta',(r.chapters||'')+(r.topic?' · '+r.topic:'')));
+      li.append(main);
+      schedule.append(li);
+    });
+  }
+  render();
+  fetch('./content/reading_schedule.json',{cache:'no-cache'})
+    .then(function(resp){if(!resp.ok) throw new Error('HTTP '+resp.status);return resp.json();})
+    .then(function(data){if (Array.isArray(data)) { records=data; render(); }})
+    .catch(function(error){console.warn('Cronograma indisponível; exibindo versão de reserva.',error);});
+  // Reavalia a semana se o site permanecer aberto na mudança do dia.
+  setInterval(render, 5*60*1000);
+})();
+</script>
+</body></html>
