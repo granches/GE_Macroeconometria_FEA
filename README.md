@@ -11,9 +11,9 @@ Este repositório reúne o **site do grupo**, as apresentações realizadas nos 
 A programação, os textos de cada reunião e eventuais alterações de horário ou local são divulgados no [site do grupo](https://granches.github.io/GE_Macroeconometria_FEA/). Para participar ou apresentar um trabalho, entre em contato pelo e-mail [granches@usp.br](mailto:granches@usp.br).
 
 
-## Acervo acadêmico
+## Cronograma de Leituras
 
-O acervo é organizado por ano e encontro. Sempre que disponíveis e autorizados para divulgação, reunimos os slides e outros materiais elaborados pelos apresentadores, além de referências para os textos discutidos.
+Link para [planilha]([https://docs.google.com/spreadsheets/d/171yjxoCfqthk7iq2G7rnLP992PJ2xK7k/edit?usp=drive_link&ouid=105037368901155597650&rtpof=true&sd=true])
 
 ## Organização do repositório
 
