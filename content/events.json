@@ -29,11 +29,11 @@
     "sort_date": "2026-11-10",
     "start_at": "2026-11-10T18:00",
     "category": "Grupo de leitura",
-    "title": "VAR Identification in High Frequency",
+    "title": "External Instruments and High-Frequency Identification",
     "details": "Apresentação de Gabriel Fogaça · Sala Delfim Netto",
     "url": "",
     "link_label": "Artigo",
-    "slides_url": ""
+    "slides_url": "./materiais/2026/2026-11-10-fogaca/slides.pdf"
   },
   {
     "section": "proximo",
@@ -42,7 +42,7 @@
     "start_at": "2026-11-17T18:00",
     "category": "Grupo de leitura",
     "title": "Weak Instruments in Instrumental Variables Regression: Theory and Practice",
-    "details": "Andrews, Stock e Sun (2019), ARE · Apresentação de Lucas Oliveira · Sala Delfim Netto",
+    "details": "Andrews, Stock e Sun (2019), Annual Review of Economics · Apresentação de Lucas Oliveira · Sala Delfim Netto",
     "url": "https://ideas.repec.org/a/anr/reveco/v11y2019p727-753.html",
     "link_label": "Artigo",
     "slides_url": ""
@@ -67,7 +67,7 @@
     "category": "Grupo de leitura",
     "title": "Prior Selection for Vector Autoregressions",
     "details": "Giannone, Lenza e Primiceri (2015), Review of Economics and Statistics · Apresentação de Giosvaldo Júnior · Sala Delfim Netto",
-    "url": "",
+    "url": "https://doi.org/10.1162/REST_a_00483",
     "link_label": "Artigo",
     "slides_url": ""
   },
@@ -79,7 +79,7 @@
     "category": "Grupo de leitura",
     "title": "Money, Income, and Causality",
     "details": "Sims (1972), American Economic Review · Apresentação de Gustavo Ranches · Sala Delfim Netto",
-    "url": "",
+    "url": "https://www.jstor.org/stable/1806097",
     "link_label": "Artigo",
     "slides_url": ""
   }
